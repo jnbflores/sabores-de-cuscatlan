@@ -1,0 +1,31 @@
+---
+import Recetas from '../../layouts/Recetas.astro';
+import imgFrescoTamarindo from '../../assets/FrescoTamarindo.jpg';
+---
+<Recetas titulo="Fresco de Tamarindo" descripcion="El refresco natural por excelencia en las mesas salvadoreñas. Ácido, dulce y muy refrescante." imagen={imgFrescoTamarindo}>
+  <h2>Ingredientes</h2>
+  <ul>
+    <li>1/2 libra de tamarindo pelado</li>
+    <li>1.5 litros de agua</li>
+    <li>Azúcar al gusto</li>
+    <li>Hielo al gusto</li>
+  </ul>
+
+  <h2>Preparación</h2>
+  <ol>
+    <li>Remoja el tamarindo pelado en un poco de agua caliente por 30 minutos para que se ablande.</li>
+    <li>Con las manos limpias, deshaz la pulpa en el agua para separar las semillas.</li>
+    <li>Pasa la mezcla por un colador hacia un pichel grande, presionando para sacar todo el jugo.</li>
+    <li>Añade el resto del agua, endulza con suficiente azúcar (el tamarindo es muy ácido) y agrega hielo.</li>
+  </ol>
+
+  <h2>Video de Preparación</h2>
+  <div class="contenedor-video">
+    <iframe 
+      src="https://www.youtube.com/embed/drw6yUxrm2Y" 
+      title="Video paso a paso - Fresco de Tamarindo Salvadoreño" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      allowfullscreen>
+    </iframe>
+  </div>
+</Recetas>

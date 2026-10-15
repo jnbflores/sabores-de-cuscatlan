@@ -1,0 +1,435 @@
+---
+import { Image } from 'astro:assets';
+import '../../styles/global.css';
+
+import imgFondo2 from '../../assets/Fondo2.jpg';
+import imgAtolElote from '../../assets/AtolElote.jpg';
+import imgAtolSemilla from '../../assets/atolSemilla.jpg';
+import imgAtolShuco from '../../assets/AtolShuco.jpg';
+import imgCamote from '../../assets/Camote.jpg';
+import imgCanoas from '../../assets/Canoas.jpg';
+import imgCebada from '../../assets/Cebada.jpg';
+import imgDulceLeche from '../../assets/DulceLeche.jpg';
+import imgDulceTamarindo from '../../assets/DulceTamarindo.jpg';
+import imgEmpanadas from '../../assets/Empanadas.jpg';
+import imgFrescoTamarindo from '../../assets/FrescoTamarindo.jpg';
+import imgHorchata from '../../assets/Horchata.jpg';
+import imgJocote from '../../assets/Jocote.jpg';
+import imgMango from '../../assets/Mango.jpg';
+import imgNuegados from '../../assets/Nuegados.jpg';
+import imgPoleada from '../../assets/Poleada.jpg';
+import imgQuesadilla from '../../assets/Quesadilla.jpg';
+import imgSorbete from '../../assets/Sorbete.jpg';
+import imgTorrejas from '../../assets/Torrejas.jpg';
+
+const bebidas = [
+  { titulo: "Fresco de Horchata", desc: "Bebida refrescante a base de semilla de morro, cacao, canela y ajonjolí.", url: "/recetas/horchata", imagen: imgHorchata },
+  { titulo: "Fresco de Tamarindo", desc: "Bebida dulce y ácida, muy popular para acompañar los almuerzos salvadoreños.", url: "/recetas/frescoTamarindo", imagen: imgFrescoTamarindo },
+  { titulo: "Fresco de Cebada", desc: "Bebida de color rosado con un toque de fresa, vainilla y especias.", url: "/recetas/cebada", imagen: imgCebada },
+  { titulo: "Atol de elote", desc: "Bebida caliente y espesa, elaborada a base de granos de elote tierno.", url: "/recetas/atolElote", imagen: imgAtolElote },
+  { titulo: "Atol Shuco", desc: "Bebida de maíz fermentado servida tradicionalmente en un huacal de morro.", url: "/recetas/atolShuco", imagen: imgAtolShuco },
+  { titulo: "Atol de Semilla de Marañón", desc: "Delicioso atol preparado con la semilla tostada del marañón y leche.", url: "/recetas/atolSemilla", imagen: imgAtolSemilla }
+];
+
+const postres = [
+  { titulo: "Torrejas", desc: "Pan envuelto en huevo, frito y bañado en miel de panela. Típico de Semana Santa.", url: "/recetas/torrejas", imagen: imgTorrejas },
+  { titulo: "Empanadas", desc: "Masa de plátano frita rellena de leche poleada o frijoles molidos dulces.", url: "/recetas/empanadas", imagen: imgEmpanadas },
+  { titulo: "Canoas de leche", desc: "Plátanos maduros fritos rellenos de leche poleada y decorados con canela.", url: "/recetas/canoas", imagen: imgCanoas },
+  { titulo: "Nuegados", desc: "Bocaditos fritos a base de yuca bañados en miel de panela.", url: "/recetas/nuegados", imagen: imgNuegados },
+  { titulo: "Poleada", desc: "Postre cremoso a base de leche, maicena, vainilla y yemas de huevo.", url: "/recetas/poleada", imagen: imgPoleada },
+  { titulo: "Quesadilla", desc: "Pan dulce tradicional a base de queso duro blando, crema y harina de arroz.", url: "/recetas/quesadilla", imagen: imgQuesadilla }
+];
+---
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bebidas y Postres Salvadoreños | Sabores de Cuscatlán</title>
+
+  <!-- Favicon SVG oficial -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="cuerpo-bebidas">
+
+  <!-- Navegación global del sitio -->
+  <div class="header-global-wrapper">
+    <div class="barra-global">
+      <a class="marca-global" href="/">
+        <img src="/img/logo.svg" alt="Sabores de Cuscatlán" class="logo-img-global" />
+      </a>
+      <button id="menu-btn" class="menu-btn-global" aria-label="Abrir menú" aria-expanded="false">☰</button>
+      <div id="menu" class="nav-global" aria-label="Navegación principal">
+        <ul>
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/platillos-tipicos">Platillos</a></li>
+          <li><a href="/bebidas-postres" aria-current="page">Bebidas y postres</a></li>
+          <li><a href="/lugares-recomendados">Lugares</a></li>
+          <li><a href="/festivales-gastronomicos">Festivales</a></li>
+          <li><a href="/contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Migas de pan globales -->
+  <div class="breadcrumb-global-wrapper">
+    <div class="breadcrumb-contenido">
+      <p>
+        <a href="/">Inicio</a> &gt; 
+        Bebidas y Postres
+      </p>
+    </div>
+  </div>
+
+  <div class="pagina-fondo" style={`--bg-image: url('${imgFondo2.src}');`}>
+    <div class="overlay"></div>
+    
+    <main class="contenedor-principal">
+      <header class="encabezado">
+        <h1>Bebidas y postres salvadoreños</h1>
+        <p>Sabores tradicionales y típicos de nuestra cultura salvadoreña</p>
+      </header>
+
+      <section class="seccion-categoria">
+        <h2>Bebidas Típicas</h2>
+        <div class="cuadricula-tarjetas">
+          {bebidas.map((item) => (
+            <a href={item.url} class="tarjeta">
+              <div class="imagen-contenedor">
+                {item.imagen ? (
+                  <Image src={item.imagen} alt={item.titulo} width={400} height={300} format="webp" />
+                ) : (
+                  <div class="imagen-placeholder">Sin Imagen</div>
+                )}
+              </div>
+              <div class="contenido-tarjeta">
+                <h3>{item.titulo}</h3>
+                <p>{item.desc}</p>
+                <span class="boton-receta">Ver receta</span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section class="seccion-categoria">
+        <h2>Postres Típicos</h2>
+        <div class="cuadricula-tarjetas">
+          {postres.map((item) => (
+            <a href={item.url} class="tarjeta">
+              <div class="imagen-contenedor">
+                {item.imagen ? (
+                  <Image src={item.imagen} alt={item.titulo} width={400} height={300} format="webp" />
+                ) : (
+                  <div class="imagen-placeholder">Sin Imagen</div>
+                )}
+              </div>
+              <div class="contenido-tarjeta">
+                <h3>{item.titulo}</h3>
+                <p>{item.desc}</p>
+                <span class="boton-receta">Ver receta</span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <footer class="footer-global">
+    <strong>Sabores de Cuscatlán</strong> · Tu mapa de sabores, recetas y tradiciones en El Salvador
+  </footer>
+
+<style is:global>
+  :root {
+    --cafe-global: #7a3410;
+    --naranja-global: #c2510f;
+    --crema-global: #f6efe2;
+    --oscuro-global: #2b1a10;
+    --dorado-global: #f2b632;
+    --texto-global: #3a2a20;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body.cuerpo-bebidas { 
+    font-family: 'Nunito', system-ui, sans-serif; 
+    color: var(--texto-global); 
+    background: var(--crema-global); 
+    line-height: 1.6; 
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* BARRA NAVEGACIÓN SUPERIOR 100% ANCHO */
+  .header-global-wrapper { 
+    width: 100% !important;
+    background: #ffffff !important; 
+    border-bottom: 3px solid var(--dorado-global) !important; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+    position: relative;
+    z-index: 100;
+    font-size: 1rem !important;
+  }
+  
+  .barra-global { 
+    max-width: 1150px !important; 
+    margin: 0 auto !important; 
+    padding: .8rem 1.2rem !important; 
+    display: flex !important; 
+    align-items: center !important; 
+    justify-content: space-between !important; 
+    gap: 1rem !important; 
+  }
+
+  .marca-global { display: flex !important; align-items: center !important; text-decoration: none !important; }
+  .logo-img-global { height: 45px !important; width: auto !important; display: block !important; }
+
+  .nav-global ul { list-style: none !important; display: flex !important; gap: 1.4rem !important; margin: 0 !important; padding: 0 !important; }
+  .nav-global a { 
+    text-decoration: none !important; 
+    font-weight: 700 !important; 
+    font-size: 0.95rem !important;
+    color: var(--naranja-global) !important; 
+    padding: .3rem 0 !important; 
+    border-bottom: 2px solid transparent !important; 
+    font-family: 'Nunito', system-ui, sans-serif !important;
+  }
+  .nav-global a:hover, .nav-global a[aria-current] { border-color: var(--naranja-global) !important; }
+  
+  .menu-btn-global { 
+    display: none !important; 
+    background: none !important; 
+    border: 2px solid var(--naranja-global) !important; 
+    color: var(--naranja-global) !important; 
+    border-radius: 8px !important; 
+    font-size: 1.2rem !important; 
+    padding: .1rem .6rem !important; 
+    cursor: pointer !important; 
+  }
+
+  /* MIGAS DE PAN BORDER-TO-BORDER */
+  .breadcrumb-global-wrapper { 
+    width: 100% !important;
+    background: rgba(246, 239, 226, 0.95) !important; 
+    font-size: .95rem !important; 
+    padding: .6rem 0 !important; 
+    border-bottom: 1px solid #e2d6c2 !important; 
+    font-family: 'Nunito', system-ui, sans-serif !important;
+  }
+  .breadcrumb-contenido { 
+    max-width: 1150px !important; 
+    margin: 0 auto !important; 
+    padding: 0 1.2rem !important; 
+    color: #3a2a20 !important;
+  }
+  .breadcrumb-contenido p {
+    margin: 0 !important;
+    font-weight: 600;
+    font-size: 0.95rem !important;
+  }
+  .breadcrumb-contenido a { 
+    color: var(--naranja-global) !important; 
+    text-decoration: none !important; 
+    font-weight: 700 !important; 
+  }
+
+  /* Contenido y fondo */
+  .pagina-fondo {
+    position: relative;
+    min-height: 100vh;
+    background-color: #1a1a1a; 
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    background: linear-gradient(
+      180deg, 
+      rgba(0, 0, 0, 0.5) 0%, 
+      rgba(0, 0, 0, 0.5) 100%
+    ); 
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .contenedor-principal {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    color: #ffffff; 
+  }
+
+  .encabezado {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .encabezado h1 {
+    font-size: 3rem;
+    font-family: 'Playfair Display', Georgia, serif;
+    margin-bottom: 10px;
+    color: #ffffff;
+  }
+
+  .encabezado p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+  }
+
+  .seccion-categoria {
+    margin-bottom: 80px;
+  }
+
+  .seccion-categoria h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 15px;
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #ffffff;
+  }
+
+  .cuadricula-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+  }
+
+  .tarjeta {
+    background-color: var(--color-tarjeta, #fdf5e6); 
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .tarjeta:hover {
+    transform: translateY(-8px); 
+    box-shadow: 0 12px 20px rgba(0,0,0,0.5);
+  }
+
+  .imagen-contenedor {
+    width: 100%;
+    height: 220px;
+    background-color: #e5e7eb;
+  }
+
+  .imagen-contenedor img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .imagen-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9ca3af;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  .contenido-tarjeta {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .contenido-tarjeta h3 {
+    color: var(--color-primario, #993300);
+    font-size: 1.4rem;
+    margin: 0 0 12px 0;
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  .contenido-tarjeta p {
+    color: var(--color-texto, #374151);
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0 0 25px 0;
+    flex-grow: 1; 
+  }
+
+  .boton-receta {
+    background-color: var(--color-boton, #d97706);
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    align-self: flex-start;
+    transition: background-color 0.2s;
+  }
+
+  .tarjeta:hover .boton-receta {
+    background-color: var(--color-boton-hover, #b45309);
+  }
+
+  /* Pie de página global */
+  .footer-global { 
+    width: 100% !important;
+    background: #1b100a !important; 
+    color: #ddd !important; 
+    padding: 2rem 1.2rem !important; 
+    text-align: center !important; 
+    font-size: .9rem !important; 
+    margin-top: 3rem !important; 
+    font-family: 'Nunito', system-ui, sans-serif !important;
+  }
+
+  @media(max-width: 720px) {
+    .menu-btn-global { display: block !important; }
+    .nav-global { 
+      display: none !important; 
+      position: absolute !important; 
+      left: 0 !important; 
+      right: 0 !important; 
+      top: 100% !important; 
+      background: #fff !important; 
+      padding: 1rem 1.2rem !important; 
+      border-bottom: 3px solid var(--dorado-global) !important; 
+      box-shadow: 0 6px 12px rgba(0,0,0,.1) !important; 
+    }
+    .nav-global.abierto { display: block !important; }
+    .nav-global ul { flex-direction: column !important; gap: .8rem !important; }
+  }
+</style>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+    if (btn && menu) {
+      btn.addEventListener('click', () => {
+        const abierto = menu.classList.toggle('abierto');
+        btn.setAttribute('aria-expanded', abierto);
+      });
+    }
+  });
+</script>
+
+</body>
+</html>

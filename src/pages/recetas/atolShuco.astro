@@ -1,0 +1,31 @@
+---
+import Recetas from '../../layouts/Recetas.astro';
+import imgAtolShuco from '../../assets/AtolShuco.jpg';
+---
+<Recetas titulo="Atol Shuco" descripcion="Bebida ancestral de maíz oscuro fermentado, servida en huacal de morro con frijoles y alhuashte." imagen={imgAtolShuco}>
+  <h2>Ingredientes</h2>
+  <ul>
+    <li>1 libra de maíz negrito o morado</li>
+    <li>Frijoles negros cocidos enteros</li>
+    <li>Polvo de alhuashte (semilla de ayote molida)</li>
+    <li>Agua, sal y chile (opcional)</li>
+  </ul>
+
+  <h2>Preparación</h2>
+  <ol>
+    <li>Lava el maíz y déjalo reposar en agua por 1 o 2 días para que fermente (el toque "shuco").</li>
+    <li>Muele el maíz fermentado y cuélalo con agua.</li>
+    <li>Cocina a fuego lento moviendo constantemente hasta que espese y se cueza bien. Añade sal.</li>
+    <li>Sirve caliente, agregando una cucharada de frijoles negros, espolvoreando alhuashte y unas gotas de chile si lo deseas.</li>
+  </ol>
+
+  <h2>Video de Preparación</h2>
+  <div class="contenedor-video">
+    <iframe 
+      src="https://www.youtube.com/embed/5ZcMcoHFAmE" 
+      title="Video paso a paso - Atol Shuco Salvadoreño" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      allowfullscreen>
+    </iframe>
+  </div>
+</Recetas>

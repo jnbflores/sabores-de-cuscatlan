@@ -1,0 +1,236 @@
+---
+// Importamos los estilos propios de la página de festivales
+import '../../styles/estilos1.css';
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explora festivales gastronómicos de El Salvador por departamento. Conoce sus tradiciones, platillos, fechas y ubicaciones.">
+  <meta name="keywords" content="festivales de El Salvador, festivales gastronómicos, comida típica salvadoreña, ferias gastronómicas">
+  <meta property="og:title" content="Festivales de El Salvador">
+  <meta property="og:description" content="Descubre las tradiciones y sabores de los 14 departamentos.">
+  <meta property="og:type" content="website">
+  <title>Festivales Gastronómicos de El Salvador | Sabores de Cuscatlán</title>
+
+  <!-- Favicon SVG oficial -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Encabezado y navegación global -->
+  <header class="header-global">
+    <div class="barra-global">
+      <a class="marca-global" href="/">
+        <img src="/img/logo.svg" alt="Sabores de Cuscatlán" class="logo-img-global" />
+      </a>
+      <button id="menu-btn" class="menu-btn-global" aria-label="Abrir menú" aria-expanded="false">☰</button>
+      <nav id="menu" class="nav-global" aria-label="Navegación principal">
+        <ul>
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/platillos-tipicos">Platillos</a></li>
+          <li><a href="/bebidas-postres">Bebidas y postres</a></li>
+          <li><a href="/lugares-recomendados">Lugares</a></li>
+          <li><a href="/festivales-gastronomicos" aria-current="page">Festivales</a></li>
+          <li><a href="/contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Migas de pan / Recurso para volver -->
+  <div class="breadcrumb-global">
+    <ol aria-label="Ruta de navegación">
+      <li><a href="/">Inicio</a></li>
+      <li>&gt;</li>
+      <li>Festivales Gastronómicos</li>
+    </ol>
+  </div>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="eyebrow">Cultura · Tradición · Gastronomía</p>
+        <h1>Festivales de<br><em>El Salvador</em></h1>
+        <p>Descubre la cultura, tradiciones y festividades gastronómicas de los 14 departamentos de El Salvador.</p>
+
+        <!-- BUSCADOR DESTACADO DENTRO DEL HERO -->
+        <div class="hero-search-wrapper">
+          <label class="search search-hero">
+            <span>⌕</span>
+            <input id="search" type="search" placeholder="Buscar por departamento (ej. Santa Ana, San Salvador)..." aria-label="Buscar departamento">
+          </label>
+        </div>
+
+        <a href="#departamentos" class="hero-button">Explorar departamentos <span>↓</span></a>
+      </div>
+      <div class="hero-label">Un país pequeño, una tradición enorme</div>
+    </section>
+
+    <section class="departments section" id="departamentos">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow dark">Explora el país</span>
+          <h2>Elige un departamento</h2>
+          <p>Entra a cada departamento para conocer un festival, sus platillos y cuándo se celebra.</p>
+        </div>
+        <span id="count" class="count">14 departamentos</span>
+      </div>
+      <div id="departmentGrid" class="department-grid"></div>
+    </section>
+
+    <dialog id="detailDialog">
+      <button id="closeDialog" class="close" aria-label="Cerrar">×</button>
+      <div id="detail"></div>
+    </dialog>
+  </main>
+
+  <footer class="footer-global">
+    <strong>Sabores de Cuscatlán</strong> · Tu mapa de sabores, recetas y tradiciones en El Salvador
+  </footer>
+
+  <style>
+    /* Estilos propios de la navegación aislados para no sobreescribir estilos1.css */
+    :root {
+      --cafe-global: #7a3410;
+      --naranja-global: #c2510f;
+      --crema-global: #f6efe2;
+      --dorado-global: #f2b632;
+    }
+
+    /* Header global */
+    .header-global { 
+      position: sticky; 
+      top: 0; 
+      z-index: 1000; 
+      background: #ffffff; 
+      border-bottom: 3px solid var(--dorado-global); 
+    }
+    .barra-global { 
+      max-width: 1150px; 
+      margin: 0 auto; 
+      padding: .8rem 1.2rem; 
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between; 
+      gap: 1rem; 
+    }
+    .marca-global { display: flex; align-items: center; text-decoration: none; }
+    .logo-img-global { height: 45px; width: auto; display: block; }
+    .nav-global ul { list-style: none; display: flex; gap: 1.4rem; margin: 0; padding: 0; }
+    .nav-global a { 
+      text-decoration: none; 
+      font-weight: 700; 
+      color: var(--naranja-global); 
+      padding: .3rem 0; 
+      border-bottom: 2px solid transparent; 
+    }
+    .nav-global a:hover, .nav-global a[aria-current] { border-color: var(--naranja-global); }
+    .menu-btn-global { 
+      display: none; 
+      background: none; 
+      border: 2px solid var(--naranja-global); 
+      color: var(--naranja-global); 
+      border-radius: 8px; 
+      font-size: 1.3rem; 
+      padding: .1rem .6rem; 
+      cursor: pointer; 
+    }
+
+    /* Breadcrumb */
+    .breadcrumb-global { 
+      background: #f6efe2; 
+      font-size: .9rem; 
+      padding: .6rem 1.2rem; 
+      border-bottom: 1px solid #e2d6c2; 
+    }
+    .breadcrumb-global ol { max-width: 1150px; margin: 0 auto; list-style: none; display: flex; gap: .4rem; padding: 0; }
+    .breadcrumb-global a { color: var(--naranja-global); text-decoration: none; font-weight: 700; }
+
+    /* Buscador adaptado al Hero */
+    .hero-search-wrapper {
+      margin: 1.5rem auto 2rem;
+      max-width: 500px;
+      width: 100%;
+    }
+    .search-hero {
+      display: flex;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.95);
+      border: 2px solid var(--dorado-global);
+      border-radius: 999px;
+      padding: .6rem 1.2rem;
+      gap: .6rem;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .search-hero:focus-within {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.35);
+      background: #ffffff;
+    }
+    .search-hero span {
+      font-size: 1.2rem;
+      color: var(--cafe-global);
+    }
+    .search-hero input {
+      border: none;
+      outline: none;
+      background: transparent;
+      font-size: 1rem;
+      width: 100%;
+      color: #333;
+    }
+
+    /* Footer global */
+    .footer-global { 
+      background: #1b100a; 
+      color: #ddd; 
+      padding: 2rem 1.2rem; 
+      text-align: center; 
+      font-size: .9rem; 
+      margin-top: 3rem; 
+    }
+
+    @media(max-width: 720px) {
+      .menu-btn-global { display: block; }
+      .nav-global { 
+        display: none; 
+        position: absolute; 
+        left: 0; 
+        right: 0; 
+        top: 100%; 
+        background: #fff; 
+        padding: 1rem 1.2rem; 
+        border-bottom: 3px solid var(--dorado-global); 
+        box-shadow: 0 6px 12px rgba(0,0,0,.1); 
+      }
+      .nav-global.abierto { display: block; }
+      .nav-global ul { flex-direction: column; gap: .8rem; }
+    }
+  </style>
+
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById('menu-btn');
+      const menu = document.getElementById('menu');
+      if (btn && menu) {
+        btn.addEventListener('click', () => {
+          const abierto = menu.classList.toggle('abierto');
+          btn.setAttribute('aria-expanded', abierto);
+        });
+      }
+    });
+  </script>
+
+  <!-- Script interactivo que busca y pinta los departamentos -->
+  <script is:inline src="/js/app.js"></script>
+</body>
+</html>

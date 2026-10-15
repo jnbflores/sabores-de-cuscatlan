@@ -1,0 +1,30 @@
+---
+import Recetas from '../../layouts/Recetas.astro';
+import imgEmpanadas from '../../assets/Empanadas.jpg';
+---
+<Recetas titulo="Empanadas de Plátano" descripcion="Postre frito de masa de plátano cocido, con relleno de leche poleada o frijolitos fritos." imagen={imgEmpanadas}>
+  <h2>Ingredientes</h2>
+  <ul>
+    <li>4 plátanos maduros</li>
+    <li>Relleno: Leche poleada firme o frijoles molidos dulces</li>
+    <li>Aceite abundante y azúcar para espolvorear</li>
+  </ul>
+
+  <h2>Preparación</h2>
+  <ol>
+    <li>Hierve los plátanos cortados por la mitad (con cáscara) hasta que la cáscara se rompa y estén muy suaves.</li>
+    <li>Retira la cáscara, aplástalos hasta hacer un puré sin grumos y déjalo enfriar bien.</li>
+    <li>Toma porciones de masa, haz una tortilla en tu mano, coloca el relleno en el medio y cierra cuidadosamente.</li>
+    <li>Fríelas en aceite bien caliente. Al sacarlas, pásalas inmediatamente por azúcar.</li>
+  </ol>
+
+  <h2>Video de Preparación</h2>
+  <div class="contenedor-video">
+    <iframe 
+      src="https://www.youtube.com/embed/6nVfzkL1gQA" 
+      title="Video paso a paso - Empanadas de Plátano Salvadoreñas" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      allowfullscreen>
+    </iframe>
+  </div>
+</Recetas>

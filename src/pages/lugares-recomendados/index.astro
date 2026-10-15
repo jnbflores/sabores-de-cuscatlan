@@ -1,0 +1,189 @@
+---
+// src/pages/lugares.astro
+// Importamos los estilos del módulo de lugares
+import '../../styles/global1.css';
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta
+    name="description"
+    content="Descubre lugares para disfrutar la comida típica de El Salvador y cómo llegar."
+  />
+  <title>Lugares · Sabores de Cuscatlán</title>
+
+  <!-- Favicon SVG oficial -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Tipografías necesarias para este módulo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,800;1,9..144,600&family=Nunito+Sans:wght@400;600;700&family=Nunito:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+
+  <!-- BARRA NAVEGACIÓN GLOBAL -->
+  <div class="header-global-wrapper">
+    <div class="barra-global">
+      <a class="marca-global" href="/">
+        <img src="/img/logo.svg" alt="Sabores de Cuscatlán" class="logo-img-global" />
+      </a>
+      <button id="menu-btn" class="menu-btn-global" aria-label="Abrir menú" aria-expanded="false">☰</button>
+      <div id="menu" class="nav-global" aria-label="Navegación principal">
+        <ul>
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/platillos-tipicos">Platillos</a></li>
+          <li><a href="/bebidas-postres">Bebidas y postres</a></li>
+          <li><a href="/lugares-recomendados" aria-current="page">Lugares</a></li>
+          <li><a href="/festivales-gastronomicos">Festivales</a></li>
+          <li><a href="/contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- MIGAS DE PAN / NAVEGACIÓN DE RETORNO -->
+  <div class="breadcrumb-global-wrapper">
+    <div class="breadcrumb-contenido">
+      <p>
+        <a href="/">Inicio</a> &gt; Lugares Recomendados
+      </p>
+    </div>
+  </div>
+
+  <!-- MAIN ORIGINAL DEL MÓDULO -->
+  <main id="app"></main>
+
+  <footer class="footer-global">
+    <strong>Sabores de Cuscatlán</strong> · Tu mapa de sabores, recetas y tradiciones en El Salvador
+  </footer>
+
+  <script src="../../data/lugares.js"></script>
+
+  <style is:global>
+    :root {
+      --naranja-global: #c2510f;
+      --dorado-global: #f2b632;
+    }
+
+    /* BARRA SUPERIOR AISLADA PARA NO INTERFERIR CON GLOBAL1.CSS */
+    .header-global-wrapper { 
+      width: 100% !important;
+      background: #ffffff !important; 
+      border-bottom: 3px solid var(--dorado-global) !important; 
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+      position: relative;
+      z-index: 100;
+      font-family: 'Nunito', system-ui, sans-serif !important;
+    }
+    
+    .barra-global { 
+      max-width: 1150px !important; 
+      margin: 0 auto !important; 
+      padding: .8rem 1.2rem !important; 
+      display: flex !important; 
+      align-items: center !important; 
+      justify-content: space-between !important; 
+      gap: 1rem !important; 
+    }
+
+    .marca-global { display: flex !important; align-items: center !important; text-decoration: none !important; }
+    .logo-img-global { height: 45px !important; width: auto !important; display: block !important; }
+
+    .nav-global ul { list-style: none !important; display: flex !important; gap: 1.4rem !important; margin: 0 !important; padding: 0 !important; }
+    .nav-global a { 
+      text-decoration: none !important; 
+      font-weight: 700 !important; 
+      color: var(--naranja-global) !important; 
+      padding: .3rem 0 !important; 
+      border-bottom: 2px solid transparent !important; 
+      font-family: 'Nunito', system-ui, sans-serif !important;
+    }
+    .nav-global a:hover, .nav-global a[aria-current] { border-color: var(--naranja-global) !important; }
+    
+    .menu-btn-global { 
+      display: none !important; 
+      background: none !important; 
+      border: 2px solid var(--naranja-global) !important; 
+      color: var(--naranja-global) !important; 
+      border-radius: 8px !important; 
+      font-size: 1.3rem !important; 
+      padding: .1rem .6rem !important; 
+      cursor: pointer !important; 
+    }
+
+    /* MIGAS DE PAN */
+    .breadcrumb-global-wrapper { 
+      width: 100% !important;
+      background: rgba(246, 239, 226, 0.95) !important; 
+      font-size: .95rem !important; 
+      padding: .6rem 0 !important; 
+      border-bottom: 1px solid #e2d6c2 !important; 
+      font-family: 'Nunito', system-ui, sans-serif !important;
+    }
+    .breadcrumb-contenido { 
+      max-width: 1150px !important; 
+      margin: 0 auto !important; 
+      padding: 0 1.2rem !important; 
+      color: #3a2a20 !important;
+    }
+    .breadcrumb-contenido p {
+      margin: 0 !important;
+      font-weight: 600;
+    }
+    .breadcrumb-contenido a { 
+      color: var(--naranja-global) !important; 
+      text-decoration: none !important; 
+      font-weight: 700 !important; 
+    }
+
+    /* FOOTER */
+    .footer-global { 
+      width: 100% !important;
+      background: #1b100a !important; 
+      color: #ddd !important; 
+      padding: 2rem 1.2rem !important; 
+      text-align: center !important; 
+      font-size: .9rem !important; 
+      margin-top: 3rem !important; 
+      font-family: 'Nunito', system-ui, sans-serif !important;
+    }
+
+    @media(max-width: 720px) {
+      .menu-btn-global { display: block !important; }
+      .nav-global { 
+        display: none !important; 
+        position: absolute !important; 
+        left: 0 !important; 
+        right: 0 !important; 
+        top: 100% !important; 
+        background: #fff !important; 
+        padding: 1rem 1.2rem !important; 
+        border-bottom: 3px solid var(--dorado-global) !important; 
+        box-shadow: 0 6px 12px rgba(0,0,0,.1) !important; 
+      }
+      .nav-global.abierto { display: block !important; }
+      .nav-global ul { flex-direction: column !important; gap: .8rem !important; }
+    }
+  </style>
+
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById('menu-btn');
+      const menu = document.getElementById('menu');
+      if (btn && menu) {
+        btn.addEventListener('click', () => {
+          const abierto = menu.classList.toggle('abierto');
+          btn.setAttribute('aria-expanded', abierto);
+        });
+      }
+    });
+  </script>
+</body>
+</html>

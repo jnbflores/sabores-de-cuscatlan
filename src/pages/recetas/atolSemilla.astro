@@ -1,0 +1,30 @@
+---
+import Recetas from '../../layouts/Recetas.astro';
+import imgAtolSemilla from '../../assets/atolSemilla.jpg';
+---
+<Recetas titulo="Atol de Semilla de Marañón" descripcion="Delicioso atol salvadoreño con el sabor tostado inconfundible de la semilla de marañón." imagen={imgAtolSemilla}>
+  <h2>Ingredientes</h2>
+  <ul>
+    <li>1 libra de semilla de marañón tostada</li>
+    <li>1 litro de leche</li>
+    <li>Azúcar al gusto y canela en rajas</li>
+  </ul>
+
+  <h2>Preparación</h2>
+  <ol>
+    <li>Tritura finamente las semillas de marañón tostadas en la licuadora o molino.</li>
+    <li>Mezcla el polvo obtenido con la leche. Si prefieres un atol muy fino, puedes colarlo.</li>
+    <li>Lleva la mezcla a fuego medio junto con la canela y el azúcar.</li>
+    <li>Remueve constantemente hasta que hierva y tome la consistencia deseada.</li>
+  </ol>
+
+  <h2>Video de Preparación</h2>
+  <div class="contenedor-video">
+    <iframe 
+      src="https://www.youtube.com/embed/w3PhR8P3tNk" 
+      title="Video paso a paso - Atol de Semilla de Marañón Salvadoreño" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      allowfullscreen>
+    </iframe>
+  </div>
+</Recetas>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://saboresdecuscatlan.com/sitemap.xml

@@ -1,0 +1,31 @@
+---
+import Recetas from '../../layouts/Recetas.astro';
+import imgTorrejas from '../../assets/Torrejas.jpg';
+---
+<Recetas titulo="Torrejas en Miel" descripcion="Pan de yema especial, cortado en rodajas gruesas, envuelto en huevo frito y bañado en miel." imagen={imgTorrejas}>
+  <h2>Ingredientes</h2>
+  <ul>
+    <li>1 torta de yema (pan tradicional)</li>
+    <li>4 huevos enteros</li>
+    <li>Aceite abundante para freír</li>
+    <li>Miel: 1 atado de dulce de panela, canela y agua</li>
+  </ul>
+
+  <h2>Preparación</h2>
+  <ol>
+    <li>Corta el pan de yema en rodajas de aproximadamente 2 centímetros de grosor.</li>
+    <li>Bate las claras de huevo a punto de nieve y luego incorpora las yemas.</li>
+    <li>Pasa cada rodaja de pan por el huevo batido asegurándote de que quede bien cubierta y fríela en aceite caliente por ambos lados.</li>
+    <li>Aparte, derrite la panela con agua y canela para hacer la miel. Sumerge las torrejas en la miel caliente para que la absorban.</li>
+  </ol>
+
+  <h2>Video de Preparación</h2>
+  <div class="contenedor-video">
+    <iframe 
+      src="https://www.youtube.com/embed/Bi9hncOmFKo" 
+      title="Video paso a paso - Torrejas en Miel Salvadoreñas" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      allowfullscreen>
+    </iframe>
+  </div>
+</Recetas>

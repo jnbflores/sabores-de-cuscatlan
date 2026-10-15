@@ -1,0 +1,31 @@
+---
+import Recetas from '../../layouts/Recetas.astro';
+import imgCanoas from '../../assets/Canoas.jpg';
+---
+<Recetas titulo="Canoas de Leche" descripcion="Plátanos maduros fritos, abiertos por la mitad y rellenos con una cremosa leche poleada." imagen={imgCanoas}>
+  <h2>Ingredientes</h2>
+  <ul>
+    <li>3 plátanos bien maduros (cáscara casi negra)</li>
+    <li>1 taza de leche poleada (maicena preparada)</li>
+    <li>Canela en polvo para decorar</li>
+    <li>Aceite para freír</li>
+  </ul>
+
+  <h2>Preparación</h2>
+  <ol>
+    <li>Pela los plátanos y fríelos enteros a fuego medio hasta que estén dorados por todos lados.</li>
+    <li>Sácalos, escúrrelos y hazles un corte a lo largo sin llegar a partirlos en dos (forma de canoa).</li>
+    <li>Prepara la leche poleada (leche, maicena, azúcar, vainilla) hasta que espese.</li>
+    <li>Rellena el centro de los plátanos con la poleada y espolvorea canela por encima.</li>
+  </ol>
+
+  <h2>Video de Preparación</h2>
+  <div class="contenedor-video">
+    <iframe 
+      src="https://www.youtube.com/embed/qILy_b_BVGI" 
+      title="Video paso a paso - Canoas de Leche Salvadoreñas" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      allowfullscreen>
+    </iframe>
+  </div>
+</Recetas>

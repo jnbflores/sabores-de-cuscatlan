@@ -1,0 +1,31 @@
+---
+import Recetas from '../../layouts/Recetas.astro';
+import imgHorchata from '../../assets/Horchata.jpg';
+---
+<Recetas titulo="Fresco de Horchata" descripcion="La bebida típica de El Salvador hecha con semilla de morro tostada, cacao, maní y especias." imagen={imgHorchata}>
+  <h2>Ingredientes</h2>
+  <ul>
+    <li>1 libra de semilla de morro</li>
+    <li>1/4 taza de maní y 1/4 taza de semillas de calabaza (pepitoria)</li>
+    <li>2 onzas de cacao y canela al gusto</li>
+    <li>Leche, agua y azúcar</li>
+  </ul>
+
+  <h2>Preparación</h2>
+  <ol>
+    <li>Tuesta todas las semillas (morro, maní, pepitoria, cacao) y la canela en un comal a fuego bajo.</li>
+    <li>Lleva las semillas tostadas a un molino o procésalas finamente en seco en casa.</li>
+    <li>Agrega agua al polvo obtenido y cuélalo usando una manta de colar, exprimiendo bien.</li>
+    <li>Añade leche y azúcar al gusto al extracto, y sirve bien frío.</li>
+  </ol>
+
+  <h2>Video de Preparación</h2>
+  <div class="contenedor-video">
+    <iframe 
+      src="https://www.youtube.com/embed/Hj1WjV5vI4E" 
+      title="Video paso a paso - Fresco de Horchata Salvadoreña" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      allowfullscreen>
+    </iframe>
+  </div>
+</Recetas>

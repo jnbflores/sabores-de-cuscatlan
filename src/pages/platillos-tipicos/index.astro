@@ -1,0 +1,178 @@
+---
+import '../../styles/estilos.css';
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Platillos Típicos Salvadoreños | Sabores de Cuscatlán</title>
+
+  <meta name="description" content="Descubre los platillos típicos más emblemáticos de El Salvador. Recetas tradicionales, historia e ingredientes de pupusas, yuca, tamales, riguas y sopa de gallina.">
+  <meta name="keywords" content="Platillos típicos salvadoreños, comida tradicional de El Salvador, recetas salvadoreñas, comida típica">
+
+  <link rel="stylesheet" href="/src/styles/estilos.css" />
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <meta property="og:title" content="Platillos Típicos Salvadoreños - Sabores de Cuscatlán">
+  <meta property="og:description" content="Explora las recetas e historia de la gastronomía más representativa de El Salvador.">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;800&family=Nunito+Sans:wght@400;600;700;800&family=Merriweather:ital,wght@0,700;1,400&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="cuerpo-platillos">
+
+  <div class="header-global-wrapper">
+    <div class="barra-global">
+      <a class="marca-global" href="/">
+        <img src="/img/logo.svg" alt="Sabores de Cuscatlán" class="logo-img-global" />
+      </a>
+      <button id="menu-btn" class="menu-btn-global" aria-label="Abrir menú" aria-expanded="false">☰</button>
+      <div id="menu" class="nav-global" aria-label="Navegación principal">
+        <ul>
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/platillos-tipicos" aria-current="page">Platillos</a></li>
+          <li><a href="/bebidas-postres">Bebidas y postres</a></li>
+          <li><a href="/lugares-recomendados">Lugares</a></li>
+          <li><a href="/festivales-gastronomicos">Festivales</a></li>
+          <li><a href="/contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="breadcrumb-global-wrapper">
+    <div class="breadcrumb-contenido">
+      <p><a href="/">Inicio</a> &gt; Platillos Típicos</p>
+    </div>
+  </div>
+
+  <header>
+    <h1>Platillos Típicos Salvadoreños</h1>
+  </header>
+
+  <main>
+    <section id="catalogo-platillos">
+      <h2>Una selección tradicional de los mejores platillos de nuestro Pulgarcito de América</h2>
+
+      <article class="tarjeta-platillo-grid">
+        <img src="/imagenes/pupusas1.jpg" alt="Plato de pupusas de queso y loroco servidas con curtido y salsa">
+        <div class="tarjeta-platillo-contenido">
+          <h3>Pupusas Salvadoreñas</h3>
+          <p>Tortillas de maíz o arroz rellenas de queso, chicharrón, frijoles o loroco. Consideradas el platillo nacional por excelencia.</p>
+          <a href="/platillos-tipicos/pupusas" class="btn-receta">Ver Receta y Detalles</a>
+        </div>
+      </article>
+
+      <article class="tarjeta-platillo">
+        <img src="/imagenes/panes-pollo1.jpg" alt="Plato de pan con pollo salvadoreño bañado en salsa de pavo con curtido y berro">
+        <div class="tarjeta-platillo-contenido">
+          <h3>Panes con Pollo Salvadoreños</h3>
+          <p>El banquete tradicional de las festividades salvadoreñas: pan suave relleno de pollo bañado en abundante salsa de tomate condimentada, acompañado de repollo, berro, pepino y rábano.</p>
+          <a href="/platillos-tipicos/panes-pollo" class="btn-receta">Ver Receta Completa</a>
+        </div>
+      </article>
+
+      <article class="tarjeta-platillo-grid">
+        <img src="/imagenes/yuca-chicharron.jpg" alt="Yuca frita con chicharrón, curtido y pepescas">
+        <div class="tarjeta-platillo-contenido">
+          <h3>Yuca Frita / Sancochada con Chicharrón</h3>
+          <p>Servida con chicharrón de cerdo, salsa de tomate y curtido. Un antojito tradicional de ferias y pueblos vivos.</p>
+          <a href="/platillos-tipicos/yuca-chicharron" class="btn-receta">Ver Receta y Detalles</a>
+        </div>
+      </article>
+
+      <article class="tarjeta-platillo-grid">
+        <img src="/imagenes/tamales-pollo1.jpg" alt="Tamales salvadoreños envueltos en hoja de huerta">
+        <div class="tarjeta-platillo-contenido">
+          <h3>Tamales Salvadoreños de Pollo</h3>
+          <p>Masa suave sazonada y cocida al vapor en hojas de huerta, rellena de carne de pollo, garbanzos y papas.</p>
+          <a href="/platillos-tipicos/tamales-pollo" class="btn-receta">Ver Receta y Detalles</a>
+        </div>
+      </article>
+
+      <article class="tarjeta-platillo">
+        <img src="/imagenes/pastelitos.jpg" alt="Pastelitos de masa de maíz con achiote rellenos de carne picada y verdura, servidos con curtido y salsa de tomate">
+        <div class="tarjeta-platillo-contenido">
+          <h3>Pastelitos Salvadoreños</h3>
+          <p>Crujientes medias lunas de masa de maíz sazonada con achiote, rellenas de carne picada y verduras frotadas, servidas calientes con curtido de repollo y salsa de tomate casera.</p>
+          <a href="/platillos-tipicos/pastelitos" class="btn-receta">Ver Receta Completa</a>
+        </div>
+      </article>
+
+      <article class="tarjeta-platillo">
+        <img src="/imagenes/enchiladas.jpg" alt="Enchiladas salvadoreñas de tortilla frita con curtido, carne molida, huevo duro y queso rallado">
+        <div class="tarjeta-platillo-contenido">
+          <h3>Enchiladas Salvadoreñas</h3>
+          <p>Crujientes tortillas de maíz condimentadas con achiote, coronadas con curtido fresco de repollo, picadillo de carne con verduras, rodajas de huevo duro, queso duro blando y salsa de tomate.</p>
+          <a href="/platillos-tipicos/enchiladas" class="btn-receta">Ver Receta Completa</a>
+        </div>
+      </article>
+
+      <article class="tarjeta-platillo">
+        <img src="/imagenes/tamales-elote.jpg" alt="Tamales de elote tierno salvadoreños servidos calientes con crema y cuajada fresca">
+        <div class="tarjeta-platillo-contenido">
+          <h3>Tamales de Elote Salvadoreños</h3>
+          <p>Deliciosos y suaves tamales dulces elaborados a partir de grano de elote tierno recién molido, mantequilla y un toque de sal, envueltos en tusas naturales y servidos con crema salvadoreña o fritos.</p>
+          <a href="/platillos-tipicos/tamales-elote" class="btn-receta">Ver Receta Completa</a>
+        </div>
+      </article>
+
+      <article class="tarjeta-platillo-grid">
+        <img src="/imagenes/riguas-cuajada1.jpg" alt="Riguas de elote tierno dobladas en hoja de huerta">
+        <div class="tarjeta-platillo-contenido">
+          <h3>Riguas con Cuajada</h3>
+          <p>Tortas de elote tierno molido asadas sobre hojas de plátano, servidas tradicionalmente con cuajada fresca y crema.</p>
+          <a href="/platillos-tipicos/riguas-cuajada" class="btn-receta">Ver Receta y Detalles</a>
+        </div>
+      </article>
+
+      <article class="tarjeta-platillo">
+        <img src="/imagenes/sopa-frijoles.jpg" alt="Sopa de frijoles rojos salvadoreños cocida con carne de res, chicharrón, pipián y plátano verde">
+        <div class="tarjeta-platillo-contenido">
+          <h3>Sopa de Frijoles con Carne</h3>
+          <p>Un reconfortante y espeso caldo tradicional salvadoreño elaborado con frijoles rojos de seda, costilla de res o chicharrón, pipianes, yuca y plátano verde o maduro.</p>
+          <a href="/platillos-tipicos/sopa-frijoles" class="btn-receta">Ver Receta Completa</a>
+        </div>
+      </article>
+
+      <article class="tarjeta-platillo-grid">
+        <img src="/imagenes/sopa-gallina1.jpg" alt="Sopa de gallina india en tazón de barro con verduras">
+        <div class="tarjeta-platillo-contenido">
+          <h3>Sopa de Gallina India</h3>
+          <p>Caldo preparado con gallina criada en patio, aromatizado con hierbas silvestres y acompañado de gallina asada.</p>
+          <a href="/platillos-tipicos/sopa-gallina" class="btn-receta">Ver Receta y Detalles</a>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <footer class="footer-global">
+    <strong>Sabores de Cuscatlán</strong> · Tu mapa de sabores, recetas y tradiciones en El Salvador
+  </footer>
+
+  <script is:inline>
+    const initMenu = () => {
+      const btn = document.getElementById('menu-btn');
+      const menu = document.getElementById('menu');
+      if (btn && menu) {
+        const newBtn = btn.cloneNode(true);
+        btn.parentNode.replaceChild(newBtn, btn);
+        
+        newBtn.addEventListener('click', () => {
+          const abierto = menu.classList.toggle('abierto');
+          newBtn.setAttribute('aria-expanded', abierto);
+        });
+      }
+    };
+
+    document.addEventListener('DOMContentLoaded', initMenu);
+    document.addEventListener('astro:page-load', initMenu);
+  </script>
+</body>
+</html>

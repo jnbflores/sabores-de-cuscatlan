@@ -1,0 +1,31 @@
+---
+import Recetas from '../../layouts/Recetas.astro';
+import imgAtolElote from '../../assets/AtolElote.jpg';
+---
+<Recetas titulo="Atol de Elote" descripcion="Bebida caliente y espesa, elaborada a base de granos de elote tierno, leche y canela." imagen={imgAtolElote}>
+  <h2>Ingredientes</h2>
+  <ul>
+    <li>10 elotes tiernos desgranados</li>
+    <li>4 tazas de leche</li>
+    <li>1 taza de agua</li>
+    <li>Azúcar, canela en rajas y una pizca de sal</li>
+  </ul>
+
+  <h2>Preparación</h2>
+  <ol>
+    <li>Licúa los granos de elote con el agua hasta obtener una mezcla fina.</li>
+    <li>Pasa la mezcla por un colador de tela (manta) apretando bien para extraer todo el líquido.</li>
+    <li>Vierte el líquido en una olla, agrega la leche, la canela, el azúcar y la sal.</li>
+    <li>Cocina a fuego medio sin dejar de remover (para que no se pegue) hasta que hierva y espese.</li>
+  </ol>
+
+  <h2>Video de Preparación</h2>
+  <div class="contenedor-video">
+    <iframe 
+      src="https://www.youtube.com/embed/1sXorAYtT7s" 
+      title="Video paso a paso - Atol de Elote Salvadoreño" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      allowfullscreen>
+    </iframe>
+  </div>
+</Recetas>

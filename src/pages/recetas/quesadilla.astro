@@ -1,0 +1,32 @@
+---
+import Recetas from '../../layouts/Recetas.astro';
+import imgQuesadilla from '../../assets/Quesadilla.jpg';
+---
+<Recetas titulo="Quesadilla Salvadoreña" descripcion="Un pan dulce tradicional, esponjoso y horneado con queso duro blando, crema y harina de arroz." imagen={imgQuesadilla}>
+  <h2>Ingredientes</h2>
+  <ul>
+    <li>1 taza de harina de arroz</li>
+    <li>1 taza de queso duro blando rallado o queso cotija</li>
+    <li>1 taza de crema (mantequilla agria/sour cream)</li>
+    <li>1 taza de azúcar y 3 huevos</li>
+    <li>Ajonjolí para decorar</li>
+  </ul>
+
+  <h2>Preparación</h2>
+  <ol>
+    <li>Separa las claras de las yemas. Bate las claras a punto de nieve y luego incorpora las yemas suavemente.</li>
+    <li>Agrega el azúcar gradualmente mientras sigues batiendo.</li>
+    <li>Incorpora con movimientos envolventes el queso rallado, la crema y finalmente la harina de arroz.</li>
+    <li>Vierte la mezcla en un molde engrasado, espolvorea abundante ajonjolí por encima y hornea a 350°F (175°C) por 30-40 minutos hasta que al insertar un palillo salga limpio.</li>
+  </ol>
+
+  <h2>Video de Preparación</h2>
+  <div class="contenedor-video">
+    <iframe 
+      src="https://www.youtube.com/embed/v0_Mwvn98DM" 
+      title="Video paso a paso - Quesadilla Salvadoreña" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      allowfullscreen>
+    </iframe>
+  </div>
+</Recetas>

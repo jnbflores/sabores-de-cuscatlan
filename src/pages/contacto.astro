@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto | Sabores de Cuscatlán</title>
+  <meta name="description" content="Escríbenos a Sabores de Cuscatlán: recomienda un lugar, una receta o un festival de comida típica salvadoreña.">
+  <meta name="keywords" content="contacto Sabores de Cuscatlán, recomendar lugares comida típica, recetas salvadoreñas, festivales gastronómicos El Salvador">
+  <meta name="robots" content="index, follow">
+  
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="cuerpo-contacto">
+
+<div class="header-global-wrapper">
+  <div class="barra-global">
+    <a class="marca-global" href="/">
+      <img src="/img/logo.svg" alt="Sabores de Cuscatlán" class="logo-img-global" />
+    </a>
+    <button id="menu-btn" class="menu-btn-global" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <div id="menu" class="nav-global" aria-label="Navegación principal">
+      <ul>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/platillos-tipicos">Platillos</a></li>
+        <li><a href="/bebidas-postres">Bebidas y postres</a></li>
+        <li><a href="/lugares-recomendados">Lugares</a></li>
+        <li><a href="/festivales-gastronomicos">Festivales</a></li>
+        <li><a href="/contacto" aria-current="page">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="breadcrumb-global-wrapper">
+  <div class="breadcrumb-contenido">
+    <p>
+      <a href="/">Inicio</a> &gt; 
+      Contacto
+    </p>
+  </div>
+</div>
+
+<section class="hero">
+  <h1>Hablemos de <span>sabor</span></h1>
+  <p>¿Conoces un lugar, una receta o un festival que debamos incluir? Cuéntanoslo y ayúdanos a completar el mapa de sabores de El Salvador.</p>
+</section>
+
+<main>
+  <section class="caja" aria-labelledby="form-t">
+    <h2 id="form-t">Envíanos un mensaje</h2>
+    <form id="form" action="https://formspree.io/f/xrpeogzy" method="POST" novalidate>
+      <label for="nombre">Nombre completo</label>
+      <input id="nombre" name="nombre" type="text" placeholder="Ej. Juan Pérez" required autocomplete="name">
+      
+      <label for="correo">Correo electrónico</label>
+      <input id="correo" name="correo" type="email" placeholder="ejemplo@correo.com" required autocomplete="email">
+      
+      <label for="tema">Tema de consulta</label>
+      <select id="tema" name="tema">
+        <option value="Recomendar un lugar">Recomendar un lugar</option>
+        <option value="Compartir una receta">Compartir una receta</option>
+        <option value="Informar sobre un festival">Informar sobre un festival</option>
+        <option value="Otro motivo">Otro motivo</option>
+      </select>
+
+      <label for="mensaje">Mensaje</label>
+      <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje o sugerencia aquí..." required></textarea>
+
+      <button class="boton" type="submit" id="btn-submit">Enviar mensaje</button>
+      <p id="msg" role="status"></p>
+    </form>
+  </section>
+
+  <aside class="caja" aria-labelledby="redes-t">
+    <h2 id="redes-t">Información de contacto</h2>
+    <ul class="lista">
+      <li>📍 Universidad de El Salvador, San Salvador</li>
+      <li>✉️ <a href="mailto:saboresdecuscatlan.sv@gmail.com">saboresdecuscatlan.sv@gmail.com</a></li>
+      <li>🕒 Horario de atención: Lunes a Viernes (8:00 AM - 5:00 PM)</li>
+    </ul>
+
+    <h3 class="subtitulo-redes">Síguenos en redes</h3>
+    <div class="redes">
+      <a class="fb" href="https://www.facebook.com/share/1MFTa6q9Zv/" target="_blank" rel="noopener noreferrer">Facebook</a>
+      <a class="ig" href="https://instagram.com/saboresdecuscatlan.sv?vrfl=MWp4bms1cTVxN21taA%3D%3D" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a class="yt" href="https://youtube.com/@saboresdecuscatlan_sv?si=IJrEmQBsRPHVhxc3" target="_blank" rel="noopener noreferrer">YouTube</a>
+      <a class="tw" href="https://x.com/SaborCuscatlan" target="_blank" rel="noopener noreferrer">X (Twitter)</a>
+    </div>
+  </aside>
+</main>
+
+<footer class="footer-global">
+  <strong>Sabores de Cuscatlán</strong> · Tu mapa de sabores, recetas y tradiciones en El Salvador
+</footer>
+
+<style is:global>
+  :root {
+    --cafe-global: #7a3410;
+    --naranja-global: #c2510f;
+    --crema-global: #f6efe2;
+    --oscuro-global: #2b1a10;
+    --dorado-global: #f2b632;
+    --texto-global: #3a2a20;
+  }
+  
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  
+  body.cuerpo-contacto { 
+    font-family: 'Nunito', system-ui, sans-serif; 
+    color: var(--texto-global); 
+    background: var(--crema-global); 
+    line-height: 1.6; 
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  a { color: inherit; }
+  h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; line-height: 1.2; }
+
+  .header-global-wrapper { 
+    width: 100% !important;
+    background: #ffffff !important; 
+    border-bottom: 3px solid var(--dorado-global) !important; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+    position: relative;
+    z-index: 100;
+  }
+  
+  .barra-global { 
+    max-width: 1150px !important; 
+    margin: 0 auto !important; 
+    padding: .8rem 1.2rem !important; 
+    display: flex !important; 
+    align-items: center !important; 
+    justify-content: space-between !important; 
+    gap: 1rem !important; 
+  }
+
+  .marca-global { display: flex !important; align-items: center !important; text-decoration: none !important; }
+  .logo-img-global { height: 45px !important; width: auto !important; display: block !important; }
+
+  .nav-global ul { list-style: none !important; display: flex !important; gap: 1.4rem !important; margin: 0 !important; padding: 0 !important; }
+  .nav-global a { 
+    text-decoration: none !important; 
+    font-weight: 700 !important; 
+    font-size: 0.95rem !important;
+    color: var(--naranja-global) !important; 
+    padding: .3rem 0 !important; 
+    border-bottom: 2px solid transparent !important; 
+    font-family: 'Nunito', system-ui, sans-serif !important;
+  }
+  .nav-global a:hover, .nav-global a[aria-current] { border-color: var(--naranja-global) !important; }
+  
+  .menu-btn-global { 
+    display: none !important; 
+    background: none !important; 
+    border: 2px solid var(--naranja-global) !important; 
+    color: var(--naranja-global) !important; 
+    border-radius: 8px !important; 
+    font-size: 1.2rem !important; 
+    padding: .1rem .6rem !important; 
+    cursor: pointer !important; 
+  }
+
+  .breadcrumb-global-wrapper { 
+    width: 100% !important;
+    background: rgba(246, 239, 226, 0.95) !important; 
+    font-size: .95rem !important; 
+    padding: .6rem 0 !important; 
+    border-bottom: 1px solid #e2d6c2 !important; 
+    font-family: 'Nunito', system-ui, sans-serif !important;
+  }
+  .breadcrumb-contenido { 
+    max-width: 1150px !important; 
+    margin: 0 auto !important; 
+    padding: 0 1.2rem !important; 
+    color: #3a2a20 !important;
+  }
+  .breadcrumb-contenido p {
+    margin: 0 !important;
+    font-weight: 600;
+    font-size: 0.95rem !important;
+  }
+  .breadcrumb-contenido a { 
+    color: var(--naranja-global) !important; 
+    text-decoration: none !important; 
+    font-weight: 700 !important; 
+  }
+
+  .hero { 
+    background: linear-gradient(rgba(43,26,16,.7), rgba(43,26,16,.8)), url('/img/card-contacto3.jpg') center/cover no-repeat; 
+    color: #fff; 
+    text-align: center; 
+    padding: 4.5rem 1.2rem; 
+  }
+  .hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); margin-bottom: .6rem; }
+  .hero h1 span { color: var(--dorado-global); }
+  .hero p { max-width: 600px; margin: auto; font-size: 1.1rem; }
+
+  main { max-width: 1000px; margin: auto; padding: 3rem 1.2rem; display: grid; grid-template-columns: 1.3fr 1fr; gap: 2rem; }
+  .caja { background: #fff; border-radius: 18px; padding: 1.8rem; box-shadow: 0 6px 18px rgba(0,0,0,.1); }
+  .caja h2 { color: var(--cafe-global); font-size: 1.6rem; margin-bottom: 1rem; }
+  label { display: block; font-weight: 700; margin: .8rem 0 .25rem; }
+  input, select, textarea { width: 100%; padding: .7rem .9rem; border: 2px solid #e2d6c2; border-radius: 10px; font: inherit; background: #fffdf9; }
+  input:focus, select:focus, textarea:focus { outline: none; border-color: var(--naranja-global); }
+  textarea { min-height: 130px; resize: vertical; }
+  
+  .boton { margin-top: 1.2rem; width: 100%; background: var(--naranja-global); color: #fff; font-weight: 800; font-size: 1.05rem; border: none; padding: .9rem; border-radius: 999px; cursor: pointer; transition: transform .2s, opacity .2s; }
+  .boton:hover { transform: translateY(-2px); }
+  .boton:disabled { opacity: .6; cursor: not-allowed; transform: none; }
+  
+  #msg { margin-top: 1rem; padding: .8rem 1rem; border-radius: 10px; display: none; font-weight: 700; }
+  #msg.ok { display: block; background: #e5f5e3; color: #1f6b2a; }
+  #msg.error { display: block; background: #fde8e6; color: #a32a1e; }
+  
+  .subtitulo-redes { margin-top: 1.5rem; margin-bottom: 0.8rem; font-size: 1.1rem; color: var(--cafe-global); }
+  .redes { display: flex; flex-direction: column; gap: .7rem; }
+  .redes a { padding: .7rem 1rem; border-radius: 12px; font-weight: 700; text-decoration: none; color: #fff; text-align: center; }
+  .fb { background: #1877f2; }
+  .yt { background: #d62020; }
+  .tw { background: #222; }
+  .ig { background: linear-gradient(45deg, #f09433, #dc2743, #bc1888); }
+  .lista { list-style: none; margin-bottom: 1.2rem; }
+  .lista li { margin: .6rem 0; }
+  .lista a { color: var(--naranja-global); text-decoration: none; font-weight: 600; }
+  
+  .footer-global { 
+    width: 100% !important;
+    background: #1b100a !important; 
+    color: #ddd !important; 
+    padding: 2rem 1.2rem !important; 
+    text-align: center !important; 
+    font-size: .9rem !important; 
+    margin-top: 3rem !important; 
+    font-family: 'Nunito', system-ui, sans-serif !important;
+  }
+
+  @media(max-width: 720px) {
+    main { grid-template-columns: 1fr; }
+    .menu-btn-global { display: block !important; }
+    .nav-global { 
+      display: none !important; 
+      position: absolute !important; 
+      left: 0 !important; 
+      right: 0 !important; 
+      top: 100% !important; 
+      background: #fff !important; 
+      padding: 1rem 1.2rem !important; 
+      border-bottom: 3px solid var(--dorado-global) !important; 
+      box-shadow: 0 6px 12px rgba(0,0,0,.1) !important; 
+    }
+    .nav-global.abierto { display: block !important; }
+    .nav-global ul { flex-direction: column !important; gap: .8rem !important; }
+  }
+</style>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+
+    if (btn && menu) {
+      btn.addEventListener('click', () => {
+        const abierto = menu.classList.toggle('abierto');
+        btn.setAttribute('aria-expanded', abierto);
+      });
+    }
+
+    const form = document.getElementById('form');
+    const msg = document.getElementById('msg');
+    const btnSubmit = document.getElementById('btn-submit');
+
+    if (form && msg && btnSubmit) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const nombre = form.nombre.value.trim();
+        const correo = form.correo.value.trim();
+        const mensaje = form.mensaje.value.trim();
+
+        if (!nombre || !correo || !mensaje || !/^\S+@\S+\.\S+$/.test(correo)) {
+          msg.style.display = 'block';
+          msg.className = 'error';
+          msg.textContent = 'Por favor, completa tu nombre, un correo válido y el mensaje.';
+          return;
+        }
+
+        btnSubmit.disabled = true;
+        btnSubmit.textContent = 'Enviando...';
+        msg.style.display = 'block';
+        msg.className = 'ok';
+        msg.textContent = 'Procesando tu mensaje...';
+
+        try {
+          const formData = new FormData(form);
+          const response = await fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: { 'Accept': 'application/json' }
+          });
+
+          if (response.ok) {
+            msg.style.display = 'block';
+            msg.className = 'ok';
+            msg.textContent = '¡Gracias! Tu mensaje fue enviado con éxito a nuestra bandeja de entrada.';
+            form.reset();
+          } else {
+            const data = await response.json();
+            msg.style.display = 'block';
+            msg.className = 'error';
+            msg.textContent = data.error || 'Ocurrió un inconveniente al enviar el mensaje. Verifica tu cuenta Formspree.';
+          }
+        } catch (error) {
+          msg.style.display = 'block';
+          msg.className = 'error';
+          msg.textContent = 'Error de conexión. Revisa tu internet e intenta nuevamente.';
+        } finally {
+          btnSubmit.disabled = false;
+          btnSubmit.textContent = 'Enviar mensaje';
+        }
+      });
+    }
+  });
+</script>
+
+</body>
+</html>
