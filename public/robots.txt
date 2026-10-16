@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://saboresdecuscatlan.com/sitemap.xml
+Sitemap: https://saboresdecuscatlan.vercel.app/sitemap-index.xml
