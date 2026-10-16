@@ -6,20 +6,16 @@ import imgFondo2 from '../../assets/Fondo2.jpg';
 import imgAtolElote from '../../assets/AtolElote.jpg';
 import imgAtolSemilla from '../../assets/atolSemilla.jpg';
 import imgAtolShuco from '../../assets/atolShuco.jpg';
-import imgCamote from '../../assets/Camote.jpg';
-import imgCanoas from '../../assets/Canoas.jpg';
 import imgCebada from '../../assets/Cebada.jpg';
+import imgCanoas from '../../assets/Canoas.jpg';
 import imgDulceLeche from '../../assets/DulceLeche.jpg';
 import imgDulceTamarindo from '../../assets/DulceTamarindo.jpg';
 import imgEmpanadas from '../../assets/Empanadas.jpg';
 import imgFrescoTamarindo from '../../assets/FrescoTamarindo.jpg';
 import imgHorchata from '../../assets/Horchata.jpg';
-import imgJocote from '../../assets/jocote.jpg';
-import imgMango from '../../assets/Mango.jpg';
 import imgNuegados from '../../assets/Nuegados.jpg';
 import imgPoleada from '../../assets/Poleada.jpg';
 import imgQuesadilla from '../../assets/Quesadilla.jpg';
-import imgSorbete from '../../assets/Sorbete.jpg';
 import imgTorrejas from '../../assets/Torrejas.jpg';
 
 const bebidas = [
@@ -44,11 +40,33 @@ const postres = [
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bebidas y Postres Salvadoreños | Sabores de Cuscatlán</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Favicon SVG oficial -->
+  <title>Bebidas y Postres Salvadoreños | Sabores de Cuscatlán</title>
+  <meta name="description" content="Descubre las bebidas frías, atoles tradicionales y postres típicos más representativos de El Salvador.">
+  <meta name="keywords" content="bebidas salvadoreñas, postres típicos el salvador, horchata, atol de elote, empanadas, nuegados">
+  <meta name="author" content="Sabores de Cuscatlán">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="google-site-verification" content="xI7OdvdAptTn4EB1PiiBTaTbsMqJodPOWeGqXII9LuE" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8TWSLDHWF"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-N8TWSLDHWF');
+  </script>
+  
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_SV">
+  <meta property="og:site_name" content="Sabores de Cuscatlán">
+  <meta property="og:title" content="Bebidas y Postres Salvadoreños | Sabores de Cuscatlán">
+  <meta property="og:description" content="Recetas y tradición de bebidas, atoles y postres de El Salvador.">
+  <meta property="og:image" content="/img/logo.svg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -166,7 +184,6 @@ const postres = [
     margin: 0 !important;
   }
 
-  /* BARRA NAVEGACIÓN SUPERIOR 100% ANCHO */
   .header-global-wrapper { 
     width: 100% !important;
     background: #ffffff !important; 
@@ -213,7 +230,6 @@ const postres = [
     cursor: pointer !important; 
   }
 
-  /* MIGAS DE PAN BORDER-TO-BORDER */
   .breadcrumb-global-wrapper { 
     width: 100% !important;
     background: rgba(246, 239, 226, 0.95) !important; 
@@ -239,7 +255,6 @@ const postres = [
     font-weight: 700 !important; 
   }
 
-  /* Contenido y fondo */
   .pagina-fondo {
     position: relative;
     min-height: 100vh;
@@ -388,7 +403,6 @@ const postres = [
     background-color: var(--color-boton-hover, #b45309);
   }
 
-  /* Pie de página global */
   .footer-global { 
     width: 100% !important;
     background: #1b100a !important; 
