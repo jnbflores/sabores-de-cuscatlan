@@ -1,7 +1,11 @@
 ---
 // src/pages/lugares.astro
-// Importamos los estilos del módulo de lugares
 import '../../styles/global1.css';
+
+// Variables SEO para optimización en motores de búsqueda
+const siteTitle = "Lugares Recomendados para Comer Comida Típica en El Salvador | Sabores de Cuscatlán";
+const siteDescription = "Descubre los mejores lugares y restaurantes para disfrutar la comida típica de El Salvador en las regiones Occidente, Centro y Oriente. Encuentra cómo llegar en bus, mapas de Google Maps, Waze y reseñas.";
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://saboresdecuscatlan.vercel.app');
 ---
 
 <!DOCTYPE html>
@@ -9,13 +13,27 @@ import '../../styles/global1.css';
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta
-    name="description"
-    content="Descubre lugares para disfrutar la comida típica de El Salvador y cómo llegar."
-  />
-  <title>Lugares · Sabores de Cuscatlán</title>
+  
+  <title>{siteTitle}</title>
+  <meta name="description" content={siteDescription} />
+  <meta name="keywords" content="comida tipica el salvador, restaurantes tipicos, ruta gastronomica el salvador, donde comer en ataco, pupusas olocuilta, turismo gastronomico salvadoreño, comida salvadoreña, lugares para comer el salvador" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href={canonicalURL} />
 
-    <!-- Google tag (gtag.js) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={canonicalURL} />
+  <meta property="og:title" content={siteTitle} />
+  <meta property="og:description" content={siteDescription} />
+  <meta property="og:image" content="/img/logo.svg" />
+  <meta property="og:site_name" content="Sabores de Cuscatlán" />
+  <meta property="og:locale" content="es_SV" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={siteTitle} />
+  <meta name="twitter:description" content={siteDescription} />
+  <meta name="twitter:image" content="/img/logo.svg" />
+
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8TWSLDHWF"></script>
   <script is:inline>
     window.dataLayer = window.dataLayer || [];
@@ -25,10 +43,8 @@ import '../../styles/global1.css';
     gtag('config', 'G-N8TWSLDHWF');
   </script>
 
-  <!-- Favicon SVG oficial -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-  <!-- Tipografías necesarias para este módulo -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -38,7 +54,6 @@ import '../../styles/global1.css';
 </head>
 <body>
 
-  <!-- BARRA NAVEGACIÓN GLOBAL -->
   <div class="header-global-wrapper">
     <div class="barra-global">
       <a class="marca-global" href="/">
@@ -58,7 +73,6 @@ import '../../styles/global1.css';
     </div>
   </div>
 
-  <!-- MIGAS DE PAN / NAVEGACIÓN DE RETORNO -->
   <div class="breadcrumb-global-wrapper">
     <div class="breadcrumb-contenido">
       <p>
@@ -67,7 +81,6 @@ import '../../styles/global1.css';
     </div>
   </div>
 
-  <!-- MAIN ORIGINAL DEL MÓDULO -->
   <main id="app"></main>
 
   <footer class="footer-global">
@@ -128,7 +141,6 @@ import '../../styles/global1.css';
       cursor: pointer !important; 
     }
 
-    /* MIGAS DE PAN */
     .breadcrumb-global-wrapper { 
       width: 100% !important;
       background: rgba(246, 239, 226, 0.95) !important; 
@@ -153,7 +165,6 @@ import '../../styles/global1.css';
       font-weight: 700 !important; 
     }
 
-    /* FOOTER */
     .footer-global { 
       width: 100% !important;
       background: #1b100a !important; 
