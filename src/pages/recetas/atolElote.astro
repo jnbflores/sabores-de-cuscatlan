@@ -1,31 +1,119 @@
 ---
 import Recetas from '../../layouts/Recetas.astro';
 import imgAtolElote from '../../assets/AtolElote.jpg';
+
+const schemaData = {
+  "@context": "https://schema.org/",
+  "@type": "Recipe",
+  "name": "Atol de Elote Salvadoreño",
+  "image": ["https://saboresdecuscatlan.sv/assets/AtolElote.jpg"],
+  "author": {
+    "@type": "Organization",
+    "name": "Sabores de Cuscatlán"
+  },
+  "datePublished": "2026-10-28",
+  "description": "Bebida caliente, dulce y espesa tradicional de El Salvador, elaborada con elote tierno recién desgranado, leche y rajas de canela.",
+  "prepTime": "PT20M",
+  "cookTime": "PT25M",
+  "totalTime": "PT45M",
+  "keywords": "atol de elote, atol salvadoreño, elote tierno, bebidas calientes el salvador, recetas tipicas salvadoreñas",
+  "recipeYield": "6 porciones",
+  "recipeCategory": "Bebida Típica",
+  "recipeCuisine": "Salvadoreña",
+  "recipeIngredient": [
+    "10 elotes tiernos desgranados",
+    "4 tazas de leche entera",
+    "1 taza de agua",
+    "Azúcar al gusto",
+    "Rajas de canela al gusto",
+    "1 pizca de sal"
+  ],
+  "recipeInstructions": [
+    {
+      "@type": "HowToStep",
+      "name": "Licuado del elote",
+      "text": "Licúa los granos de elote tierno con la taza de agua hasta obtener una mezcla fina."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Colado",
+      "text": "Pasa la mezcla por un colador de tela o manta de colar apretando bien para extraer todo el líquido."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Integración de ingredientes",
+      "text": "Vierte el líquido obtenido en una olla honda, agrega la leche, la canela, el azúcar y la pizca de sal."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Cocción al fuego",
+      "text": "Cocina a fuego medio sin dejar de mover en ningún momento con paleta de madera hasta que hierva y alcance una consistencia espesa."
+    }
+  ]
+};
 ---
-<Recetas titulo="Atol de Elote" descripcion="Bebida caliente y espesa, elaborada a base de granos de elote tierno, leche y canela." imagen={imgAtolElote}>
-  <h2>Ingredientes</h2>
-  <ul>
-    <li>10 elotes tiernos desgranados</li>
-    <li>4 tazas de leche</li>
-    <li>1 taza de agua</li>
-    <li>Azúcar, canela en rajas y una pizca de sal</li>
-  </ul>
 
-  <h2>Preparación</h2>
-  <ol>
-    <li>Licúa los granos de elote con el agua hasta obtener una mezcla fina.</li>
-    <li>Pasa la mezcla por un colador de tela (manta) apretando bien para extraer todo el líquido.</li>
-    <li>Vierte el líquido en una olla, agrega la leche, la canela, el azúcar y la sal.</li>
-    <li>Cocina a fuego medio sin dejar de remover (para que no se pegue) hasta que hierva y espese.</li>
-  </ol>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPI115 - 2026 - Receta de Atol de Elote Salvadoreño | Sabores de Cuscatlán</title>
+    
+    <meta name="description" content="Aprende a preparar el auténtico atol de elote tierno salvadoreño. Receta tradicional paso a paso con leche, canela, video tutorial e ingredientes.">
+    <meta name="keywords" content="atol de elote salvadoreño, atol de elote tierno, bebidas tipicas el salvador, receta de atol de elote">
+    <meta name="author" content="Sabores de Cuscatlán">
 
-  <h2>Video de Preparación</h2>
-  <div class="contenedor-video">
-    <iframe 
-      src="https://www.youtube.com/embed/1sXorAYtT7s" 
-      title="Video paso a paso - Atol de Elote Salvadoreño" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-      allowfullscreen>
-    </iframe>
-  </div>
-</Recetas>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8TWSLDHWF"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-N8TWSLDHWF');
+    </script>
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <meta property="og:title" content="TPI115 - 2026 - Receta Auténtica de Atol de Elote | Sabores de Cuscatlán">
+    <meta property="og:description" content="Aprende a preparar la tradicional bebida caliente y cremosa de elote tierno con canela y leche al estilo salvadoreño.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content={new URL('/img/og-cover.jpg', Astro.site)} />
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TPI115 - 2026 - Receta Auténtica de Atol de Elote | Sabores de Cuscatlán">
+    <meta name="twitter:description" content="Aprende a preparar la tradicional bebida caliente y cremosa de elote tierno con canela y leche al estilo salvadoreño.">
+    <meta name="twitter:image" content={new URL('/img/og-cover.jpg', Astro.site)} />
+
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(schemaData)} />
+</head>
+<body>
+  <Recetas titulo="Atol de Elote" descripcion="Bebida caliente y espesa, elaborada a base de granos de elote tierno, leche y canela." imagen={imgAtolElote}>
+    <h2>Ingredientes</h2>
+    <ul>
+      <li>10 elotes tiernos desgranados</li>
+      <li>4 tazas de leche</li>
+      <li>1 taza de agua</li>
+      <li>Azúcar, canela en rajas y una pizca de sal</li>
+    </ul>
+
+    <h2>Preparación</h2>
+    <ol>
+      <li>Licúa los granos de elote con el agua hasta obtener una mezcla fina.</li>
+      <li>Pasa la mezcla por un colador de tela (manta) apretando bien para extraer todo el líquido.</li>
+      <li>Vierte el líquido en una olla, agrega la leche, la canela, el azúcar y la sal.</li>
+      <li>Cocina a fuego medio sin dejar de remover (para que no se pegue) hasta que hierva y espese.</li>
+    </ol>
+
+    <h2>Video de Preparación</h2>
+    <div class="contenedor-video">
+      <iframe 
+        src="https://www.youtube.com/embed/1sXorAYtT7s" 
+        title="Video paso a paso - Atol de Elote Salvadoreño" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+      </iframe>
+    </div>
+  </Recetas>
+</body>
+</html>

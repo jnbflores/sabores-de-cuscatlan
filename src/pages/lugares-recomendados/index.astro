@@ -1,9 +1,7 @@
 ---
-// src/pages/lugares.astro
 import '../../styles/global1.css';
 
-// Variables SEO para optimización en motores de búsqueda
-const siteTitle = "Lugares Recomendados para Comer Comida Típica en El Salvador | Sabores de Cuscatlán";
+const siteTitle = "TPI115 - 2026 - Lugares Recomendados para Comer Comida Típica en El Salvador | Sabores de Cuscatlán";
 const siteDescription = "Descubre los mejores lugares y restaurantes para disfrutar la comida típica de El Salvador en las regiones Occidente, Centro y Oriente. Encuentra cómo llegar en bus, mapas de Google Maps, Waze y reseñas.";
 const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://saboresdecuscatlan.vercel.app');
 ---
@@ -24,16 +22,15 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://saboresd
   <meta property="og:url" content={canonicalURL} />
   <meta property="og:title" content={siteTitle} />
   <meta property="og:description" content={siteDescription} />
-  <meta property="og:image" content="/img/logo.svg" />
+  <meta property="og:image" content={new URL('/img/og-cover.jpg', Astro.site)} />
   <meta property="og:site_name" content="Sabores de Cuscatlán" />
   <meta property="og:locale" content="es_SV" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={siteTitle} />
   <meta name="twitter:description" content={siteDescription} />
-  <meta name="twitter:image" content="/img/logo.svg" />
+  <meta name="twitter:image" content={new URL('/img/og-cover.jpg', Astro.site)} />
 
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8TWSLDHWF"></script>
   <script is:inline>
     window.dataLayer = window.dataLayer || [];
@@ -95,7 +92,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://saboresd
       --dorado-global: #f2b632;
     }
 
-    /* BARRA SUPERIOR AISLADA PARA NO INTERFERIR CON GLOBAL1.CSS */
     .header-global-wrapper { 
       width: 100% !important;
       background: #ffffff !important; 

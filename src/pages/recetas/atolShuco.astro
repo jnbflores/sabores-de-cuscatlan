@@ -1,31 +1,119 @@
 ---
 import Recetas from '../../layouts/Recetas.astro';
 import imgAtolShuco from '../../assets/atolShuco.jpg';
+
+const schemaData = {
+  "@context": "https://schema.org/",
+  "@type": "Recipe",
+  "name": "Atol Shuco Salvadoreño",
+  "image": ["https://saboresdecuscatlan.sv/assets/atolShuco.jpg"],
+  "author": {
+    "@type": "Organization",
+    "name": "Sabores de Cuscatlán"
+  },
+  "datePublished": "2026-10-28",
+  "description": "Bebida ancestral salvadoreña de maíz negrito fermentado, servida tradicionalmente en huacal de morro con frijoles enteros, alhuashte y chile.",
+  "prepTime": "PT1440M",
+  "cookTime": "PT30M",
+  "totalTime": "PT1470M",
+  "keywords": "atol shuco, atol shuco salvadoreño, maiz fermentado, alhuashte, bebidas ancestrales el salvador",
+  "recipeYield": "6 porciones",
+  "recipeCategory": "Bebida Típica",
+  "recipeCuisine": "Salvadoreña",
+  "recipeIngredient": [
+    "1 libra de maíz negrito o morado",
+    "1 taza de frijoles negros cocidos enteros",
+    "Polvo de alhuashte (semilla de ayote molida) al gusto",
+    "Agua",
+    "Sal al gusto",
+    "Chile liquido o en gotas (opcional)"
+  ],
+  "recipeInstructions": [
+    {
+      "@type": "HowToStep",
+      "name": "Fermentación del maíz",
+      "text": "Lava el maíz y déjalo reposar en agua por 1 o 2 días para que fermente levemente (el toque 'shuco')."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Molienda y colado",
+      "text": "Muele el maíz fermentado y cuélalo con abundante agua utilizando un colador fino o manta."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Cocción",
+      "text": "Cocina a fuego lento moviendo constantemente con paleta de madera hasta que espese y se cueza bien. Añade sal al gusto."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Servido y acompañamiento",
+      "text": "Sirve caliente en huacal de morro, agregando una cucharada de frijoles negros enteros, espolvoreando alhuashte y unas gotas de chile al gusto."
+    }
+  ]
+};
 ---
-<Recetas titulo="Atol Shuco" descripcion="Bebida ancestral de maíz oscuro fermentado, servida en huacal de morro con frijoles y alhuashte." imagen={imgAtolShuco}>
-  <h2>Ingredientes</h2>
-  <ul>
-    <li>1 libra de maíz negrito o morado</li>
-    <li>Frijoles negros cocidos enteros</li>
-    <li>Polvo de alhuashte (semilla de ayote molida)</li>
-    <li>Agua, sal y chile (opcional)</li>
-  </ul>
 
-  <h2>Preparación</h2>
-  <ol>
-    <li>Lava el maíz y déjalo reposar en agua por 1 o 2 días para que fermente (el toque "shuco").</li>
-    <li>Muele el maíz fermentado y cuélalo con agua.</li>
-    <li>Cocina a fuego lento moviendo constantemente hasta que espese y se cueza bien. Añade sal.</li>
-    <li>Sirve caliente, agregando una cucharada de frijoles negros, espolvoreando alhuashte y unas gotas de chile si lo deseas.</li>
-  </ol>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPI115 - 2026 - Receta de Atol Shuco Salvadoreño | Sabores de Cuscatlán</title>
+    
+    <meta name="description" content="Aprende a preparar el ancestral atol shuco salvadoreño. Receta tradicional con maíz negrito fermentado, alhuashte, frijoles negros y video tutorial.">
+    <meta name="keywords" content="atol shuco salvadoreño, atol shuco, maiz negrito, alhuashte, bebidas tipicas el salvador">
+    <meta name="author" content="Sabores de Cuscatlán">
 
-  <h2>Video de Preparación</h2>
-  <div class="contenedor-video">
-    <iframe 
-      src="https://www.youtube.com/embed/5ZcMcoHFAmE" 
-      title="Video paso a paso - Atol Shuco Salvadoreño" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-      allowfullscreen>
-    </iframe>
-  </div>
-</Recetas>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8TWSLDHWF"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-N8TWSLDHWF');
+    </script>
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <meta property="og:title" content="TPI115 - 2026 - Receta Auténtica de Atol Shuco | Sabores de Cuscatlán">
+    <meta property="og:description" content="Guía paso a paso para elaborar el tradicional atol shuco de maíz fermentado servido con alhuashte y frijoles enteros.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content={new URL('/img/og-cover.jpg', Astro.site)} />
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TPI115 - 2026 - Receta Auténtica de Atol Shuco | Sabores de Cuscatlán">
+    <meta name="twitter:description" content="Guía paso a paso para elaborar el tradicional atol shuco de maíz fermentado servido con alhuashte y frijoles enteros.">
+    <meta name="twitter:image" content={new URL('/img/og-cover.jpg', Astro.site)} />
+
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(schemaData)} />
+</head>
+<body>
+  <Recetas titulo="Atol Shuco" descripcion="Bebida ancestral de maíz oscuro fermentado, servida en huacal de morro con frijoles y alhuashte." imagen={imgAtolShuco}>
+    <h2>Ingredientes</h2>
+    <ul>
+      <li>1 libra de maíz negrito o morado</li>
+      <li>Frijoles negros cocidos enteros</li>
+      <li>Polvo de alhuashte (semilla de ayote molida)</li>
+      <li>Agua, sal y chile (opcional)</li>
+    </ul>
+
+    <h2>Preparación</h2>
+    <ol>
+      <li>Lava el maíz y déjalo reposar en agua por 1 o 2 días para que fermente (el toque "shuco").</li>
+      <li>Muele el maíz fermentado y cuélalo con agua.</li>
+      <li>Cocina a fuego lento moviendo constantemente hasta que espese y se cueza bien. Añade sal.</li>
+      <li>Sirve caliente, agregando una cucharada de frijoles negros, espolvoreando alhuashte y unas gotas de chile si lo deseas.</li>
+    </ol>
+
+    <h2>Video de Preparación</h2>
+    <div class="contenedor-video">
+      <iframe 
+        src="https://www.youtube.com/embed/5ZcMcoHFAmE" 
+        title="Video paso a paso - Atol Shuco Salvadoreño" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+      </iframe>
+    </div>
+  </Recetas>
+</body>
+</html>

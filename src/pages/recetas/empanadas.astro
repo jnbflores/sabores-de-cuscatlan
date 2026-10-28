@@ -1,30 +1,116 @@
 ---
 import Recetas from '../../layouts/Recetas.astro';
 import imgEmpanadas from '../../assets/Empanadas.jpg';
+
+const schemaData = {
+  "@context": "https://schema.org/",
+  "@type": "Recipe",
+  "name": "Empanadas de Plátano Salvadoreñas",
+  "image": ["https://saboresdecuscatlan.sv/assets/Empanadas.jpg"],
+  "author": {
+    "@type": "Organization",
+    "name": "Sabores de Cuscatlán"
+  },
+  "datePublished": "2026-10-28",
+  "description": "Delicioso postre tradicional salvadoreño elaborado con puré de plátano maduro frito, relleno de leche poleada o frijoles molidos dulces y espolvoreado con azúcar.",
+  "prepTime": "PT25M",
+  "cookTime": "PT20M",
+  "totalTime": "PT45M",
+  "keywords": "empanadas de platano, empanadas salvadoreñas, leche poleada, frijoles dulces, postres tipicos el salvador",
+  "recipeYield": "10 empanadas",
+  "recipeCategory": "Postre Típico",
+  "recipeCuisine": "Salvadoreña",
+  "recipeIngredient": [
+    "4 plátanos maduros",
+    "Relleno: Leche poleada firme o frijoles molidos dulces",
+    "Aceite vegetal abundante para freír",
+    "Azúcar blanca para espolvorear"
+  ],
+  "recipeInstructions": [
+    {
+      "@type": "HowToStep",
+      "name": "Cocción del plátano",
+      "text": "Hierve los plátanos cortados por la mitad (con cáscara) en agua hasta que la cáscara se rompa y la pulpa esté muy suave."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Elaboración de la masa",
+      "text": "Retira la cáscara, aplasta la pulpa de los plátanos hasta hacer un puré fino sin grumos y déjalo enfriar bien."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Relleno y formado",
+      "text": "Toma porciones de masa, haz una tortillita en la palma de tu mano, coloca una cucharada de leche poleada o frijoles en el centro y cierra doblando las orillas cuidando que no se salga el relleno."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Fritura y azucarado",
+      "text": "Fríelas en un sartén con abundante aceite bien caliente hasta que estén doraditas. Escúrrelas y pásalas inmediatamente por azúcar blanca."
+    }
+  ]
+};
 ---
-<Recetas titulo="Empanadas de Plátano" descripcion="Postre frito de masa de plátano cocido, con relleno de leche poleada o frijolitos fritos." imagen={imgEmpanadas}>
-  <h2>Ingredientes</h2>
-  <ul>
-    <li>4 plátanos maduros</li>
-    <li>Relleno: Leche poleada firme o frijoles molidos dulces</li>
-    <li>Aceite abundante y azúcar para espolvorear</li>
-  </ul>
 
-  <h2>Preparación</h2>
-  <ol>
-    <li>Hierve los plátanos cortados por la mitad (con cáscara) hasta que la cáscara se rompa y estén muy suaves.</li>
-    <li>Retira la cáscara, aplástalos hasta hacer un puré sin grumos y déjalo enfriar bien.</li>
-    <li>Toma porciones de masa, haz una tortilla en tu mano, coloca el relleno en el medio y cierra cuidadosamente.</li>
-    <li>Fríelas en aceite bien caliente. Al sacarlas, pásalas inmediatamente por azúcar.</li>
-  </ol>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPI115 - 2026 - Receta de Empanadas de Plátano Salvadoreñas | Sabores de Cuscatlán</title>
+    
+    <meta name="description" content="Aprende a preparar auténticas empanadas de plátano salvadoreñas rellenas de leche poleada o frijolitos dulces. Receta paso a paso, video e ingredientes.">
+    <meta name="keywords" content="empanadas de platano salvadoreñas, receta de empanadas de platano, postres tipicos el salvador, empanadas de poleada">
+    <meta name="author" content="Sabores de Cuscatlán">
 
-  <h2>Video de Preparación</h2>
-  <div class="contenedor-video">
-    <iframe 
-      src="https://www.youtube.com/embed/6nVfzkL1gQA" 
-      title="Video paso a paso - Empanadas de Plátano Salvadoreñas" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-      allowfullscreen>
-    </iframe>
-  </div>
-</Recetas>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8TWSLDHWF"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-N8TWSLDHWF');
+    </script>
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <meta property="og:title" content="TPI115 - 2026 - Receta Auténtica de Empanadas de Plátano | Sabores de Cuscatlán">
+    <meta property="og:description" content="Guía paso a paso para elaborar crujientes empanadas de plátano frito rellenas de manjar blanco o frijolitos refritos con azúcar.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content={new URL('/img/og-cover.jpg', Astro.site)} />
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TPI115 - 2026 - Receta Auténtica de Empanadas de Plátano | Sabores de Cuscatlán">
+    <meta name="twitter:description" content="Guía paso a paso para elaborar crujientes empanadas de plátano frito rellenas de manjar blanco o frijolitos refritos con azúcar.">
+    <meta name="twitter:image" content={new URL('/img/og-cover.jpg', Astro.site)} />
+
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(schemaData)} />
+</head>
+<body>
+  <Recetas titulo="Empanadas de Plátano" descripcion="Postre frito de masa de plátano cocido, con relleno de leche poleada o frijolitos fritos." imagen={imgEmpanadas}>
+    <h2>Ingredientes</h2>
+    <ul>
+      <li>4 plátanos maduros</li>
+      <li>Relleno: Leche poleada firme o frijoles molidos dulces</li>
+      <li>Aceite abundante y azúcar para espolvorear</li>
+    </ul>
+
+    <h2>Preparación</h2>
+    <ol>
+      <li>Hierve los plátanos cortados por la mitad (con cáscara) hasta que la cáscara se rompa y estén muy suaves.</li>
+      <li>Retira la cáscara, aplástalos hasta hacer un puré sin grumos y déjalo enfriar bien.</li>
+      <li>Toma porciones de masa, haz una tortilla en tu mano, coloca el relleno en el medio y cierra cuidadosamente.</li>
+      <li>Fríelas en aceite bien caliente. Al sacarlas, pásalas inmediatamente por azúcar.</li>
+    </ol>
+
+    <h2>Video de Preparación</h2>
+    <div class="contenedor-video">
+      <iframe 
+        src="https://www.youtube.com/embed/6nVfzkL1gQA" 
+        title="Video paso a paso - Empanadas de Plátano Salvadoreñas" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+      </iframe>
+    </div>
+  </Recetas>
+</body>
+</html>

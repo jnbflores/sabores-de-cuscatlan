@@ -42,14 +42,13 @@ const postres = [
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Bebidas y Postres Salvadoreños | Sabores de Cuscatlán</title>
+  <title>TPI115 - 2026 - Bebidas y Postres Salvadoreños | Sabores de Cuscatlán</title>
   <meta name="description" content="Descubre las bebidas frías, atoles tradicionales y postres típicos más representativos de El Salvador.">
   <meta name="keywords" content="bebidas salvadoreñas, postres típicos el salvador, horchata, atol de elote, empanadas, nuegados">
   <meta name="author" content="Sabores de Cuscatlán">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="google-site-verification" content="xI7OdvdAptTn4EB1PiiBTaTbsMqJodPOWeGqXII9LuE" />
 
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8TWSLDHWF"></script>
   <script is:inline>
     window.dataLayer = window.dataLayer || [];
@@ -64,9 +63,14 @@ const postres = [
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_SV">
   <meta property="og:site_name" content="Sabores de Cuscatlán">
-  <meta property="og:title" content="Bebidas y Postres Salvadoreños | Sabores de Cuscatlán">
+  <meta property="og:title" content="TPI115 - 2026 - Bebidas y Postres Salvadoreños | Sabores de Cuscatlán">
   <meta property="og:description" content="Recetas y tradición de bebidas, atoles y postres de El Salvador.">
-  <meta property="og:image" content="/img/logo.svg">
+  <meta property="og:image" content={new URL('/img/og-cover.jpg', Astro.site)} />
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TPI115 - 2026 - Bebidas y Postres Salvadoreños | Sabores de Cuscatlán">
+  <meta name="twitter:description" content="Recetas y tradición de bebidas, atoles y postres de El Salvador.">
+  <meta name="twitter:image" content={new URL('/img/og-cover.jpg', Astro.site)} />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -74,7 +78,6 @@ const postres = [
 </head>
 <body class="cuerpo-bebidas">
 
-  <!-- Navegación global del sitio -->
   <div class="header-global-wrapper">
     <div class="barra-global">
       <a class="marca-global" href="/">
@@ -94,7 +97,6 @@ const postres = [
     </div>
   </div>
 
-  <!-- Migas de pan globales -->
   <div class="breadcrumb-global-wrapper">
     <div class="breadcrumb-contenido">
       <p>

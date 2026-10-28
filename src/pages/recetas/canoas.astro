@@ -1,31 +1,117 @@
 ---
 import Recetas from '../../layouts/Recetas.astro';
 import imgCanoas from '../../assets/Canoas.jpg';
+
+const schemaData = {
+  "@context": "https://schema.org/",
+  "@type": "Recipe",
+  "name": "Canoas de Leche Salvadoreñas",
+  "image": ["https://saboresdecuscatlan.sv/assets/Canoas.jpg"],
+  "author": {
+    "@type": "Organization",
+    "name": "Sabores de Cuscatlán"
+  },
+  "datePublished": "2026-10-28",
+  "description": "Postre salvadoreño hecho con plátanos maduros fritos enteros, ahuecados en forma de canoa, rellenos de leche poleada y decorados con canela.",
+  "prepTime": "PT15M",
+  "cookTime": "PT20M",
+  "totalTime": "PT35M",
+  "keywords": "canoas de leche, canoas de platano, leche poleada, postres tipicos el salvador, plátanos fritos",
+  "recipeYield": "3 porciones",
+  "recipeCategory": "Postre Típico",
+  "recipeCuisine": "Salvadoreña",
+  "recipeIngredient": [
+    "3 plátanos bien maduros (cáscara casi negra)",
+    "1 taza de leche poleada (maicena preparada)",
+    "Canela en polvo para decorar",
+    "Aceite vegetal para freír"
+  ],
+  "recipeInstructions": [
+    {
+      "@type": "HowToStep",
+      "name": "Fritura del plátano",
+      "text": "Pela los plátanos maduros y fríelos enteros en un sartén con aceite a fuego medio hasta que estén bien dorados por todos sus lados."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Apertura en canoa",
+      "text": "Sácalos, colócalos sobre papel absorbente y hazles un corte a lo largo por el centro sin atravesarlos por completo para darles forma de canoa."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Preparación de la manjar",
+      "text": "Prepara la leche poleada (leche, maicena, azúcar, vainilla) en una olla a fuego medio moviendo constantemente hasta que espese."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Relleno y decorado",
+      "text": "Rellena la hendidura de cada plátano frito con abundante leche poleada caliente y espolvorea canela en polvo al gusto por encima."
+    }
+  ]
+};
 ---
-<Recetas titulo="Canoas de Leche" descripcion="Plátanos maduros fritos, abiertos por la mitad y rellenos con una cremosa leche poleada." imagen={imgCanoas}>
-  <h2>Ingredientes</h2>
-  <ul>
-    <li>3 plátanos bien maduros (cáscara casi negra)</li>
-    <li>1 taza de leche poleada (maicena preparada)</li>
-    <li>Canela en polvo para decorar</li>
-    <li>Aceite para freír</li>
-  </ul>
 
-  <h2>Preparación</h2>
-  <ol>
-    <li>Pela los plátanos y fríelos enteros a fuego medio hasta que estén dorados por todos lados.</li>
-    <li>Sácalos, escúrrelos y hazles un corte a lo largo sin llegar a partirlos en dos (forma de canoa).</li>
-    <li>Prepara la leche poleada (leche, maicena, azúcar, vainilla) hasta que espese.</li>
-    <li>Rellena el centro de los plátanos con la poleada y espolvorea canela por encima.</li>
-  </ol>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPI115 - 2026 - Receta de Canoas de Leche Salvadoreñas | Sabores de Cuscatlán</title>
+    
+    <meta name="description" content="Aprende a preparar deliciosas canoas de leche salvadoreñas. Receta tradicional con plátanos maduros fritos, leche poleada, canela y video paso a paso.">
+    <meta name="keywords" content="canoas de leche salvadoreñas, canoas de platano, postres tipicos el salvador, receta de canoas de leche">
+    <meta name="author" content="Sabores de Cuscatlán">
 
-  <h2>Video de Preparación</h2>
-  <div class="contenedor-video">
-    <iframe 
-      src="https://www.youtube.com/embed/qILy_b_BVGI" 
-      title="Video paso a paso - Canoas de Leche Salvadoreñas" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-      allowfullscreen>
-    </iframe>
-  </div>
-</Recetas>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8TWSLDHWF"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-N8TWSLDHWF');
+    </script>
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <meta property="og:title" content="TPI115 - 2026 - Receta Auténtica de Canoas de Leche | Sabores de Cuscatlán">
+    <meta property="og:description" content="Guía paso a paso para elaborar irresistibles canoas de plátano maduro frito rellenas de suave leche poleada y canela.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content={new URL('/img/og-cover.jpg', Astro.site)} />
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TPI115 - 2026 - Receta Auténtica de Canoas de Leche | Sabores de Cuscatlán">
+    <meta name="twitter:description" content="Guía paso a paso para elaborar irresistibles canoas de plátano maduro frito rellenas de suave leche poleada y canela.">
+    <meta name="twitter:image" content={new URL('/img/og-cover.jpg', Astro.site)} />
+
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(schemaData)} />
+</head>
+<body>
+  <Recetas titulo="Canoas de Leche" descripcion="Plátanos maduros fritos, abiertos por la mitad y rellenos con una cremosa leche poleada." imagen={imgCanoas}>
+    <h2>Ingredientes</h2>
+    <ul>
+      <li>3 plátanos bien maduros (cáscara casi negra)</li>
+      <li>1 taza de leche poleada (maicena preparada)</li>
+      <li>Canela en polvo para decorar</li>
+      <li>Aceite para freír</li>
+    </ul>
+
+    <h2>Preparación</h2>
+    <ol>
+      <li>Pela los plátanos y fríelos enteros a fuego medio hasta que estén dorados por todos lados.</li>
+      <li>Sácalos, escúrrelos y hazles un corte a lo largo sin llegar a partirlos en dos (forma de canoa).</li>
+      <li>Prepara la leche poleada (leche, maicena, azúcar, vainilla) hasta que espese.</li>
+      <li>Rellena el centro de los plátanos con la poleada y espolvorea canela por encima.</li>
+    </ol>
+
+    <h2>Video de Preparación</h2>
+    <div class="contenedor-video">
+      <iframe 
+        src="https://www.youtube.com/embed/qILy_b_BVGI" 
+        title="Video paso a paso - Canoas de Leche Salvadoreñas" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+      </iframe>
+    </div>
+  </Recetas>
+</body>
+</html>

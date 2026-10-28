@@ -1,30 +1,116 @@
 ---
 import Recetas from '../../layouts/Recetas.astro';
 import imgAtolSemilla from '../../assets/atolSemilla.jpg';
+
+const schemaData = {
+  "@context": "https://schema.org/",
+  "@type": "Recipe",
+  "name": "Atol de Semilla de Marañón Salvadoreño",
+  "image": ["https://saboresdecuscatlan.sv/assets/atolSemilla.jpg"],
+  "author": {
+    "@type": "Organization",
+    "name": "Sabores de Cuscatlán"
+  },
+  "datePublished": "2026-10-28",
+  "description": "Bebida caliente y reconfortante de la gastronomía salvadoreña, elaborada con semillas de marañón tostadas, leche y canela.",
+  "prepTime": "PT15M",
+  "cookTime": "PT20M",
+  "totalTime": "PT35M",
+  "keywords": "atol de semilla de marañon, atol salvadoreño, semilla de marañon, bebidas calientes el salvador, recetas tradicionales",
+  "recipeYield": "6 porciones",
+  "recipeCategory": "Bebida Típica",
+  "recipeCuisine": "Salvadoreña",
+  "recipeIngredient": [
+    "1 libra de semilla de marañón tostada",
+    "1 litro de leche",
+    "Azúcar al gusto",
+    "Rajas de canela al gusto"
+  ],
+  "recipeInstructions": [
+    {
+      "@type": "HowToStep",
+      "name": "Triturado",
+      "text": "Tritura finamente las semillas de marañón tostadas en la licuadora o procesador hasta obtener un polvo fino."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Mezclado",
+      "text": "Mezcla el polvo de semilla de marañón obtenido con la leche. Si prefieres un atol muy fino, puedes colarlo."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Cocción",
+      "text": "Lleva la mezcla a una olla a fuego medio junto con las rajas de canela y el azúcar al gusto."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Espesado y servido",
+      "text": "Remueve constantemente con una paleta para evitar que se pegue hasta que hierva, alcance la consistencia deseada y sirve caliente."
+    }
+  ]
+};
 ---
-<Recetas titulo="Atol de Semilla de Marañón" descripcion="Delicioso atol salvadoreño con el sabor tostado inconfundible de la semilla de marañón." imagen={imgAtolSemilla}>
-  <h2>Ingredientes</h2>
-  <ul>
-    <li>1 libra de semilla de marañón tostada</li>
-    <li>1 litro de leche</li>
-    <li>Azúcar al gusto y canela en rajas</li>
-  </ul>
 
-  <h2>Preparación</h2>
-  <ol>
-    <li>Tritura finamente las semillas de marañón tostadas en la licuadora o molino.</li>
-    <li>Mezcla el polvo obtenido con la leche. Si prefieres un atol muy fino, puedes colarlo.</li>
-    <li>Lleva la mezcla a fuego medio junto con la canela y el azúcar.</li>
-    <li>Remueve constantemente hasta que hierva y tome la consistencia deseada.</li>
-  </ol>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPI115 - 2026 - Receta de Atol de Semilla de Marañón Salvadoreño | Sabores de Cuscatlán</title>
+    
+    <meta name="description" content="Aprende a preparar el delicioso atol de semilla de marañón salvadoreño. Receta tradicional con leche, canela, video paso a paso e ingredientes.">
+    <meta name="keywords" content="atol de semilla de marañon salvadoreño, atol de marañon, bebidas tipicas el salvador, receta atol de marañon">
+    <meta name="author" content="Sabores de Cuscatlán">
 
-  <h2>Video de Preparación</h2>
-  <div class="contenedor-video">
-    <iframe 
-      src="https://www.youtube.com/embed/w3PhR8P3tNk" 
-      title="Video paso a paso - Atol de Semilla de Marañón Salvadoreño" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-      allowfullscreen>
-    </iframe>
-  </div>
-</Recetas>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8TWSLDHWF"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-N8TWSLDHWF');
+    </script>
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <meta property="og:title" content="TPI115 - 2026 - Receta Auténtica de Atol de Semilla de Marañón | Sabores de Cuscatlán">
+    <meta property="og:description" content="Guía paso a paso para elaborar el tradicional atol salvadoreño de semilla de marañón tostada con leche y canela.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content={new URL('/img/og-cover.jpg', Astro.site)} />
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TPI115 - 2026 - Receta Auténtica de Atol de Semilla de Marañón | Sabores de Cuscatlán">
+    <meta name="twitter:description" content="Guía paso a paso para elaborar el tradicional atol salvadoreño de semilla de marañón tostada con leche y canela.">
+    <meta name="twitter:image" content={new URL('/img/og-cover.jpg', Astro.site)} />
+
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(schemaData)} />
+</head>
+<body>
+  <Recetas titulo="Atol de Semilla de Marañón" descripcion="Delicioso atol salvadoreño con el sabor tostado inconfundible de la semilla de marañón." imagen={imgAtolSemilla}>
+    <h2>Ingredientes</h2>
+    <ul>
+      <li>1 libra de semilla de marañón tostada</li>
+      <li>1 litro de leche</li>
+      <li>Azúcar al gusto y canela en rajas</li>
+    </ul>
+
+    <h2>Preparación</h2>
+    <ol>
+      <li>Tritura finamente las semillas de marañón tostadas en la licuadora o molino.</li>
+      <li>Mezcla el polvo obtenido con la leche. Si prefieres un atol muy fino, puedes colarlo.</li>
+      <li>Lleva la mezcla a fuego medio junto con la canela y el azúcar.</li>
+      <li>Remueve constantemente hasta que hierva y tome la consistencia deseada.</li>
+    </ol>
+
+    <h2>Video de Preparación</h2>
+    <div class="contenedor-video">
+      <iframe 
+        src="https://www.youtube.com/embed/w3PhR8P3tNk" 
+        title="Video paso a paso - Atol de Semilla de Marañón Salvadoreño" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+      </iframe>
+    </div>
+  </Recetas>
+</body>
+</html>

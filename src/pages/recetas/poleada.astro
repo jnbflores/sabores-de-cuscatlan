@@ -1,31 +1,119 @@
 ---
 import Recetas from '../../layouts/Recetas.astro';
 import imgPoleada from '../../assets/Poleada.jpg';
+
+const schemaData = {
+  "@context": "https://schema.org/",
+  "@type": "Recipe",
+  "name": "Leche Poleada Salvadoreña",
+  "image": ["https://saboresdecuscatlan.sv/assets/Poleada.jpg"],
+  "author": {
+    "@type": "Organization",
+    "name": "Sabores de Cuscatlán"
+  },
+  "datePublished": "2026-10-28",
+  "description": "Postre de cuchara tradicional salvadoreño, de textura cremosa a base de leche, maicena, yemas de huevo y un toque de canela molida.",
+  "prepTime": "PT10M",
+  "cookTime": "PT15M",
+  "totalTime": "PT25M",
+  "keywords": "leche poleada, poleada salvadoreña, manjar blanco, postres tipicos el salvador, crema de vainilla",
+  "recipeYield": "6 porciones",
+  "recipeCategory": "Postre Típico",
+  "recipeCuisine": "Salvadoreña",
+  "recipeIngredient": [
+    "1 litro de leche entera",
+    "4 cucharadas colmadas de maicena (fécula de maíz)",
+    "3 yemas de huevo",
+    "Azúcar al gusto",
+    "Extracto de vainilla al gusto",
+    "Canela molida para espolvorear"
+  ],
+  "recipeInstructions": [
+    {
+      "@type": "HowToStep",
+      "name": "Licuado de base",
+      "text": "En una licuadora, mezcla la leche, la maicena, las yemas de huevo y el azúcar hasta obtener una consistencia homogénea y sin grumos."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Sazonado",
+      "text": "Vierte la mezcla en una olla (preferiblemente de fondo grueso) y agrega el extracto de vainilla."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Cocción y espesado",
+      "text": "Cocina a fuego medio-bajo revolviendo continuamente con un batidor de globo para evitar que se pegue o se formen grumos."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Servido y decorado",
+      "text": "Cuando comience a hervir y espese, retira del fuego. Sirve inmediatamente en platitos hondos y espolvorea canela molida por encima."
+    }
+  ]
+};
 ---
-<Recetas titulo="Leche Poleada" descripcion="Un postre de cuchara, suave y cremoso, con base de leche, yemas de huevo y un toque de canela." imagen={imgPoleada}>
-  <h2>Ingredientes</h2>
-  <ul>
-    <li>1 litro de leche</li>
-    <li>4 cucharadas colmadas de maicena (fécula de maíz)</li>
-    <li>3 yemas de huevo</li>
-    <li>Azúcar al gusto, extracto de vainilla y canela</li>
-  </ul>
 
-  <h2>Preparación</h2>
-  <ol>
-    <li>En una licuadora, mezcla la leche, la maicena, las yemas de huevo y el azúcar hasta que no haya grumos.</li>
-    <li>Vierte la mezcla en una olla (preferiblemente de fondo grueso) y agrega la vainilla.</li>
-    <li>Cocina a fuego medio-bajo, sin dejar de remover con un batidor de globo para que no se hagan grumos.</li>
-    <li>Cuando comience a hervir y espese, retira del fuego. Sirve en platitos hondos y espolvorea canela molida por encima.</li>
-  </ol>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPI115 - 2026 - Receta de Leche Poleada Salvadoreña | Sabores de Cuscatlán</title>
+    
+    <meta name="description" content="Aprende a preparar la tradicional leche poleada salvadoreña. Receta cremosa paso a paso con leche, maicena, yemas de huevo, canela y video tutorial.">
+    <meta name="keywords" content="leche poleada salvadoreña, receta de leche poleada, postres tipicos el salvador, poleada de maicena">
+    <meta name="author" content="Sabores de Cuscatlán">
 
-  <h2>Video de Preparación</h2>
-  <div class="contenedor-video">
-    <iframe 
-      src="https://www.youtube.com/embed/oJOgB_JiCwA" 
-      title="Video paso a paso - Leche Poleada Salvadoreña" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-      allowfullscreen>
-    </iframe>
-  </div>
-</Recetas>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8TWSLDHWF"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-N8TWSLDHWF');
+    </script>
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <meta property="og:title" content="TPI115 - 2026 - Receta Auténtica de Leche Poleada | Sabores de Cuscatlán">
+    <meta property="og:description" content="Guía paso a paso para preparar la clásica leche poleada salvadoreña, un postre cremoso de cuchara aromatizado con vainilla y canela.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content={new URL('/img/og-cover.jpg', Astro.site)} />
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TPI115 - 2026 - Receta Auténtica de Leche Poleada | Sabores de Cuscatlán">
+    <meta name="twitter:description" content="Guía paso a paso para preparar la clásica leche poleada salvadoreña, un postre cremoso de cuchara aromatizado con vainilla y canela.">
+    <meta name="twitter:image" content={new URL('/img/og-cover.jpg', Astro.site)} />
+
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(schemaData)} />
+</head>
+<body>
+  <Recetas titulo="Leche Poleada" descripcion="Un postre de cuchara, suave y cremoso, con base de leche, yemas de huevo y un toque de canela." imagen={imgPoleada}>
+    <h2>Ingredientes</h2>
+    <ul>
+      <li>1 litro de leche</li>
+      <li>4 cucharadas colmadas de maicena (fécula de maíz)</li>
+      <li>3 yemas de huevo</li>
+      <li>Azúcar al gusto, extracto de vainilla y canela</li>
+    </ul>
+
+    <h2>Preparación</h2>
+    <ol>
+      <li>En una licuadora, mezcla la leche, la maicena, las yemas de huevo y el azúcar hasta que no haya grumos.</li>
+      <li>Vierte la mezcla en una olla (preferiblemente de fondo grueso) y agrega la vainilla.</li>
+      <li>Cocina a fuego medio-bajo, sin dejar de remover con un batidor de globo para que no se hagan grumos.</li>
+      <li>Cuando comience a hervir y espese, retira del fuego. Sirve en platitos hondos y espolvorea canela molida por encima.</li>
+    </ol>
+
+    <h2>Video de Preparación</h2>
+    <div class="contenedor-video">
+      <iframe 
+        src="https://www.youtube.com/embed/oJOgB_JiCwA" 
+        title="Video paso a paso - Poleada Salvadoreña" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+      </iframe>
+    </div>
+  </Recetas>
+</body>
+</html>

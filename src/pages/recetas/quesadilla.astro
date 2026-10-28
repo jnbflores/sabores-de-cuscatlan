@@ -1,32 +1,120 @@
 ---
 import Recetas from '../../layouts/Recetas.astro';
 import imgQuesadilla from '../../assets/Quesadilla.jpg';
+
+const schemaData = {
+  "@context": "https://schema.org/",
+  "@type": "Recipe",
+  "name": "Quesadilla Salvadoreña",
+  "image": ["https://saboresdecuscatlan.sv/assets/Quesadilla.jpg"],
+  "author": {
+    "@type": "Organization",
+    "name": "Sabores de Cuscatlán"
+  },
+  "datePublished": "2026-10-28",
+  "description": "Pan dulce tradicional salvadoreño horneado, de textura rica y esponjosa elaborado con queso duro blando, crema, harina de arroz y ajonjolí.",
+  "prepTime": "PT20M",
+  "cookTime": "PT40M",
+  "totalTime": "PT60M",
+  "keywords": "quesadilla salvadoreña, pan dulce salvadoreño, harina de arroz, queso duro blando, recetas tipicas el salvador",
+  "recipeYield": "8 porciones",
+  "recipeCategory": "Postre Típico",
+  "recipeCuisine": "Salvadoreña",
+  "recipeIngredient": [
+    "1 taza de harina de arroz",
+    "1 taza de queso duro blando rallado o queso cotija",
+    "1 taza de crema (mantequilla agria/sour cream)",
+    "1 taza de azúcar",
+    "3 huevos",
+    "Ajonjolí al gusto para decorar"
+  ],
+  "recipeInstructions": [
+    {
+      "@type": "HowToStep",
+      "name": "Batido de huevos",
+      "text": "Separa las claras de las yemas. Bate las claras a punto de nieve y luego incorpora las yemas suavemente."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Incorporación de azúcar",
+      "text": "Agrega el azúcar gradualmente mientras sigues batiendo suavemente."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Mezclado de ingredientes",
+      "text": "Incorpora con movimientos envolventes el queso rallado, la crema y finalmente la harina de arroz hasta obtener una mezcla homogénea."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Horneado",
+      "text": "Vierte la mezcla en un molde previamente engrasado, espolvorea abundante ajonjolí por encima y hornea a 350°F (175°C) durante 30 a 40 minutos o hasta que al insertar un palillo salga limpio."
+    }
+  ]
+};
 ---
-<Recetas titulo="Quesadilla Salvadoreña" descripcion="Un pan dulce tradicional, esponjoso y horneado con queso duro blando, crema y harina de arroz." imagen={imgQuesadilla}>
-  <h2>Ingredientes</h2>
-  <ul>
-    <li>1 taza de harina de arroz</li>
-    <li>1 taza de queso duro blando rallado o queso cotija</li>
-    <li>1 taza de crema (mantequilla agria/sour cream)</li>
-    <li>1 taza de azúcar y 3 huevos</li>
-    <li>Ajonjolí para decorar</li>
-  </ul>
 
-  <h2>Preparación</h2>
-  <ol>
-    <li>Separa las claras de las yemas. Bate las claras a punto de nieve y luego incorpora las yemas suavemente.</li>
-    <li>Agrega el azúcar gradualmente mientras sigues batiendo.</li>
-    <li>Incorpora con movimientos envolventes el queso rallado, la crema y finalmente la harina de arroz.</li>
-    <li>Vierte la mezcla en un molde engrasado, espolvorea abundante ajonjolí por encima y hornea a 350°F (175°C) por 30-40 minutos hasta que al insertar un palillo salga limpio.</li>
-  </ol>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPI115 - 2026 - Receta de Quesadilla Salvadoreña | Sabores de Cuscatlán</title>
+    
+    <meta name="description" content="Aprende a preparar la auténtica quesadilla salvadoreña de queso y harina de arroz. Receta tradicional de pan dulce horneado con video paso a paso e ingredientes.">
+    <meta name="keywords" content="quesadilla salvadoreña, receta de quesadilla salvadoreña, pan dulce el salvador, harina de arroz y queso">
+    <meta name="author" content="Sabores de Cuscatlán">
 
-  <h2>Video de Preparación</h2>
-  <div class="contenedor-video">
-    <iframe 
-      src="https://www.youtube.com/embed/v0_Mwvn98DM" 
-      title="Video paso a paso - Quesadilla Salvadoreña" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-      allowfullscreen>
-    </iframe>
-  </div>
-</Recetas>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8TWSLDHWF"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-N8TWSLDHWF');
+    </script>
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <meta property="og:title" content="TPI115 - 2026 - Receta Auténtica de Quesadilla Salvadoreña | Sabores de Cuscatlán">
+    <meta property="og:description" content="Guía completa paso a paso para hornear la tradicional quesadilla artesanal salvadoreña con queso duro blando y ajonjolí.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content={new URL('/img/og-cover.jpg', Astro.site)} />
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TPI115 - 2026 - Receta Auténtica de Quesadilla Salvadoreña | Sabores de Cuscatlán">
+    <meta name="twitter:description" content="Guía completa paso a paso para hornear la tradicional quesadilla artesanal salvadoreña con queso duro blando y ajonjolí.">
+    <meta name="twitter:image" content={new URL('/img/og-cover.jpg', Astro.site)} />
+
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(schemaData)} />
+</head>
+<body>
+  <Recetas titulo="Quesadilla Salvadoreña" descripcion="Un pan dulce tradicional, esponjoso y horneado con queso duro blando, crema y harina de arroz." imagen={imgQuesadilla}>
+    <h2>Ingredientes</h2>
+    <ul>
+      <li>1 taza de harina de arroz</li>
+      <li>1 taza de queso duro blando rallado o queso cotija</li>
+      <li>1 taza de crema (mantequilla agria/sour cream)</li>
+      <li>1 taza de azúcar y 3 huevos</li>
+      <li>Ajonjolí para decorar</li>
+    </ul>
+
+    <h2>Preparación</h2>
+    <ol>
+      <li>Separa las claras de las yemas. Bate las claras a punto de nieve y luego incorpora las yemas suavemente.</li>
+      <li>Agrega el azúcar gradualmente mientras sigues batiendo.</li>
+      <li>Incorpora con movimientos envolventes el queso rallado, la crema y finalmente la harina de arroz.</li>
+      <li>Vierte la mezcla en un molde engrasado, espolvorea abundante ajonjolí por encima y hornea a 350°F (175°C) por 30-40 minutos hasta que al insertar un palillo salga limpio.</li>
+    </ol>
+
+    <h2>Video de Preparación</h2>
+    <div class="contenedor-video">
+      <iframe 
+        src="https://www.youtube.com/embed/v0_Mwvn98DM" 
+        title="Video paso a paso - Quesadilla Salvadoreña" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+      </iframe>
+    </div>
+  </Recetas>
+</body>
+</html>

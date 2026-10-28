@@ -1,12 +1,34 @@
+---
+const siteTitle = "TPI115 - 2026 - Contacto | Sabores de Cuscatlán";
+const siteDescription = "Escríbenos a Sabores de Cuscatlán: recomienda un lugar, una receta o un festival de comida típica salvadoreña.";
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://saboresdecuscatlan.vercel.app');
+---
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contacto | Sabores de Cuscatlán</title>
-  <meta name="description" content="Escríbenos a Sabores de Cuscatlán: recomienda un lugar, una receta o un festival de comida típica salvadoreña.">
+  
+  <title>{siteTitle}</title>
+  <meta name="description" content={siteDescription}>
   <meta name="keywords" content="contacto Sabores de Cuscatlán, recomendar lugares comida típica, recetas salvadoreñas, festivales gastronómicos El Salvador">
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href={canonicalURL} />
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content={canonicalURL}>
+  <meta property="og:title" content={siteTitle}>
+  <meta property="og:description" content={siteDescription}>
+  <meta property="og:image" content={new URL('/img/og-cover.jpg', Astro.site)}>
+  <meta property="og:site_name" content="Sabores de Cuscatlán" />
+  <meta property="og:locale" content="es_SV" />
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content={siteTitle}>
+  <meta name="twitter:description" content={siteDescription}>
+  <meta name="twitter:image" content={new URL('/img/og-cover.jpg', Astro.site)}>
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8TWSLDHWF"></script>
   <script is:inline>

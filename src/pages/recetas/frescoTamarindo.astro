@@ -1,31 +1,117 @@
 ---
 import Recetas from '../../layouts/Recetas.astro';
 import imgFrescoTamarindo from '../../assets/FrescoTamarindo.jpg';
+
+const schemaData = {
+  "@context": "https://schema.org/",
+  "@type": "Recipe",
+  "name": "Fresco de Tamarindo Salvadoreño",
+  "image": ["https://saboresdecuscatlan.sv/assets/FrescoTamarindo.jpg"],
+  "author": {
+    "@type": "Organization",
+    "name": "Sabores de Cuscatlán"
+  },
+  "datePublished": "2026-10-28",
+  "description": "Bebida natural tradicional de El Salvador preparada a base de pulpa de tamarindo fresco, agua y azúcar.",
+  "prepTime": "PT35M",
+  "cookTime": "PT0M",
+  "totalTime": "PT35M",
+  "keywords": "fresco de tamarindo, tamarindo salvadoreño, bebidas naturales el salvador, refresco de tamarindo",
+  "recipeYield": "6 porciones",
+  "recipeCategory": "Bebida Típica",
+  "recipeCuisine": "Salvadoreña",
+  "recipeIngredient": [
+    "1/2 libra de tamarindo pelado",
+    "1.5 litros de agua",
+    "Azúcar al gusto",
+    "Hielo al gusto"
+  ],
+  "recipeInstructions": [
+    {
+      "@type": "HowToStep",
+      "name": "Remojo",
+      "text": "Remoja el tamarindo pelado en un poco de agua caliente por 30 minutos para que se ablande."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Extracción de la pulpa",
+      "text": "Con las manos limpias, deshaz la pulpa en el agua para separar las semillas."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Colado",
+      "text": "Pasa la mezcla por un colador hacia un pichel grande, presionando para sacar todo el jugo."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Endulzado y servido",
+      "text": "Añade el resto del agua, endulza con suficiente azúcar y agrega hielo."
+    }
+  ]
+};
 ---
-<Recetas titulo="Fresco de Tamarindo" descripcion="El refresco natural por excelencia en las mesas salvadoreñas. Ácido, dulce y muy refrescante." imagen={imgFrescoTamarindo}>
-  <h2>Ingredientes</h2>
-  <ul>
-    <li>1/2 libra de tamarindo pelado</li>
-    <li>1.5 litros de agua</li>
-    <li>Azúcar al gusto</li>
-    <li>Hielo al gusto</li>
-  </ul>
 
-  <h2>Preparación</h2>
-  <ol>
-    <li>Remoja el tamarindo pelado en un poco de agua caliente por 30 minutos para que se ablande.</li>
-    <li>Con las manos limpias, deshaz la pulpa en el agua para separar las semillas.</li>
-    <li>Pasa la mezcla por un colador hacia un pichel grande, presionando para sacar todo el jugo.</li>
-    <li>Añade el resto del agua, endulza con suficiente azúcar (el tamarindo es muy ácido) y agrega hielo.</li>
-  </ol>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPI115 - 2026 - Receta de Fresco de Tamarindo Salvadoreño | Sabores de Cuscatlán</title>
+    
+    <meta name="description" content="Aprende a preparar el auténtico fresco de tamarindo salvadoreño. Receta natural, agridulce y súper refrescante con video explicativo paso a paso.">
+    <meta name="keywords" content="fresco de tamarindo salvadoreño, refresco de tamarindo, bebidas tipicas el salvador, receta de fresco de tamarindo">
+    <meta name="author" content="Sabores de Cuscatlán">
 
-  <h2>Video de Preparación</h2>
-  <div class="contenedor-video">
-    <iframe 
-      src="https://www.youtube.com/embed/drw6yUxrm2Y" 
-      title="Video paso a paso - Fresco de Tamarindo Salvadoreño" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-      allowfullscreen>
-    </iframe>
-  </div>
-</Recetas>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8TWSLDHWF"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-N8TWSLDHWF');
+    </script>
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <meta property="og:title" content="TPI115 - 2026 - Receta Auténtica de Fresco de Tamarindo | Sabores de Cuscatlán">
+    <meta property="og:description" content="Paso a paso para elaborar refresco de tamarindo natural salvadoreño con video tutorial e ingredientes tradicionales.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content={new URL('/img/og-cover.jpg', Astro.site)} />
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TPI115 - 2026 - Receta Auténtica de Fresco de Tamarindo | Sabores de Cuscatlán">
+    <meta name="twitter:description" content="Paso a paso para elaborar refresco de tamarindo natural salvadoreño con video tutorial e ingredientes tradicionales.">
+    <meta name="twitter:image" content={new URL('/img/og-cover.jpg', Astro.site)} />
+
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(schemaData)} />
+</head>
+<body>
+  <Recetas titulo="Fresco de Tamarindo" descripcion="El refresco natural por excelencia en las mesas salvadoreñas. Ácido, dulce y muy refrescante." imagen={imgFrescoTamarindo}>
+    <h2>Ingredientes</h2>
+    <ul>
+      <li>1/2 libra de tamarindo pelado</li>
+      <li>1.5 litros de agua</li>
+      <li>Azúcar al gusto</li>
+      <li>Hielo al gusto</li>
+    </ul>
+
+    <h2>Preparación</h2>
+    <ol>
+      <li>Remoja el tamarindo pelado en un poco de agua caliente por 30 minutos para que se ablande.</li>
+      <li>Con las manos limpias, deshaz la pulpa en el agua para separar las semillas.</li>
+      <li>Pasa la mezcla por un colador hacia un pichel grande, presionando para sacar todo el jugo.</li>
+      <li>Añade el resto del agua, endulza con suficiente azúcar (el tamarindo es muy ácido) y agrega hielo.</li>
+    </ol>
+
+    <h2>Video de Preparación</h2>
+    <div class="contenedor-video">
+      <iframe 
+        src="https://www.youtube.com/embed/drw6yUxrm2Y" 
+        title="Video paso a paso - Fresco de Tamarindo Salvadoreño" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+      </iframe>
+    </div>
+  </Recetas>
+</body>
+</html>

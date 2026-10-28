@@ -7,7 +7,7 @@ import '../../styles/estilos.css';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Receta de Enchiladas Salvadoreñas | Sabores de Cuscatlán</title>
+    <title>TPI115 - 2026 - Receta de Enchiladas Salvadoreñas | Sabores de Cuscatlán</title>
     
     <meta name="description" content="Aprende a preparar las auténticas enchiladas salvadoreñas de tortilla frita con achiote, carne, curtido y huevo duro. Receta, video e ingredientes.">
     <meta name="keywords" content="enchiladas salvadoreñas, receta de enchiladas de carne, antojitos tipicos el salvador">
@@ -15,12 +15,26 @@ import '../../styles/estilos.css';
 
     <link rel="stylesheet" href="/src/styles/estilos.css" />
 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8TWSLDHWF"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-N8TWSLDHWF');
+    </script>
+
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
-    <meta property="og:title" content="Receta Auténtica de Enchiladas Salvadoreñas">
+    <meta property="og:title" content="TPI115 - 2026 - Receta Auténtica de Enchiladas Salvadoreñas | Sabores de Cuscatlán">
     <meta property="og:description" content="Guía paso a paso con tortilla crujiente de achiote, curtido de repollo, picadillo, huevo duro y salsa natural.">
     <meta property="og:type" content="article">
-    <meta property="og:image" content="/imagenes/enchiladas.jpg">
+    <meta property="og:image" content={new URL('/img/og-cover.jpg', Astro.site)} />
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TPI115 - 2026 - Receta Auténtica de Enchiladas Salvadoreñas | Sabores de Cuscatlán">
+    <meta name="twitter:description" content="Guía paso a paso con tortilla crujiente de achiote, curtido de repollo, picadillo, huevo duro y salsa natural.">
+    <meta name="twitter:image" content={new URL('/img/og-cover.jpg', Astro.site)} />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,7 +45,7 @@ import '../../styles/estilos.css';
       "@context": "https://schema.org/",
       "@type": "Recipe",
       "name": "Enchiladas Salvadoreñas",
-      "image": ["/imagenes/enchiladas.jpg"],
+      "image": ["https://saboresdecuscatlan.sv/imagenes/enchiladas.jpg"],
       "author": {
         "@type": "Organization",
         "name": "Sabores de Cuscatlán"

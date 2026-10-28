@@ -1,32 +1,121 @@
 ---
 import Recetas from '../../layouts/Recetas.astro';
 import imgCebada from '../../assets/Cebada.jpg';
+
+const schemaData = {
+  "@context": "https://schema.org/",
+  "@type": "Recipe",
+  "name": "Fresco de Cebada Salvadoreño",
+  "image": ["https://saboresdecuscatlan.sv/assets/Cebada.jpg"],
+  "author": {
+    "@type": "Organization",
+    "name": "Sabores de Cuscatlán"
+  },
+  "datePublished": "2026-10-28",
+  "description": "Bebida tradicional de El Salvador caracterizada por su color rosado, aroma a especias dulces y toque de fresa y vainilla.",
+  "prepTime": "PT15M",
+  "cookTime": "PT10M",
+  "totalTime": "PT25M",
+  "keywords": "fresco de cebada, cebada salvadoreña, fresca rosada, bebidas tipicas el salvador",
+  "recipeYield": "6 porciones",
+  "recipeCategory": "Bebida Típica",
+  "recipeCuisine": "Salvadoreña",
+  "recipeIngredient": [
+    "1/2 taza de harina de cebada o trigo tostado",
+    "1 litro de agua",
+    "Leche evaporada al gusto",
+    "Esencia de fresa y de vainilla al gusto",
+    "Canela, clavo de olor y pimienta gorda",
+    "Azúcar al gusto",
+    "Colorante rojo comestible (opcional)"
+  ],
+  "recipeInstructions": [
+    {
+      "@type": "HowToStep",
+      "name": "Infusión de especias",
+      "text": "Hierve el agua con la canela, el clavo de olor y la pimienta gorda. Deja enfriar y cuela la infusión."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Mezclado de harina",
+      "text": "Licúa la harina de cebada con el agua especiada hasta integrar por completo."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Sazonado y color",
+      "text": "Añade la leche evaporada, el azúcar, las esencias de fresa y vainilla, y un toque de colorante rojo para obtener el característico tono rosado."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Servido",
+      "text": "Mezcla bien y sirve helado con bastante hielo."
+    }
+  ]
+};
 ---
-<Recetas titulo="Fresco de Cebada" descripcion="Fresco salvadoreño de color rosado característico, con esencia de fresa, vainilla y especias." imagen={imgCebada}>
-  <h2>Ingredientes</h2>
-  <ul>
-    <li>1/2 taza de harina de cebada o trigo tostado</li>
-    <li>1 litro de agua y leche evaporada al gusto</li>
-    <li>Esencia de fresa y de vainilla</li>
-    <li>Canela, clavo de olor y pimienta gorda</li>
-    <li>Azúcar y colorante rojo comestible (opcional)</li>
-  </ul>
 
-  <h2>Preparación</h2>
-  <ol>
-    <li>Hierve agua con la canela, clavo y pimienta gorda. Deja enfriar y cuela.</li>
-    <li>Licúa la harina de cebada con el agua especiada.</li>
-    <li>Añade la leche evaporada, azúcar, las esencias de fresa y vainilla, y un toque de colorante para darle su tono rosado.</li>
-    <li>Sirve bien frío con mucho hielo.</li>
-  </ol>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPI115 - 2026 - Receta de Fresco de Cebada Salvadoreño | Sabores de Cuscatlán</title>
+    
+    <meta name="description" content="Aprende a preparar el icónico fresco de cebada salvadoreño de color rosado. Receta tradicional con especias, esencia de fresa, video e ingredientes.">
+    <meta name="keywords" content="fresco de cebada salvadoreño, cebada rosada, bebidas tipicas el salvador, receta fresco de cebada">
+    <meta name="author" content="Sabores de Cuscatlán">
 
-  <h2>Video de Preparación</h2>
-  <div class="contenedor-video">
-    <iframe 
-      src="https://www.youtube.com/embed/2-b1kWrQogo" 
-      title="Video paso a paso - Fresco de Cebada Salvadoreño" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-      allowfullscreen>
-    </iframe>
-  </div>
-</Recetas>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8TWSLDHWF"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-N8TWSLDHWF');
+    </script>
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <meta property="og:title" content="TPI115 - 2026 - Receta Auténtica de Fresco de Cebada | Sabores de Cuscatlán">
+    <meta property="og:description" content="Aprende a preparar el emblemático fresco de cebada rosado salvadoreño con su infusión de especias dulces y aromas artesanales.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content={new URL('/img/og-cover.jpg', Astro.site)} />
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TPI115 - 2026 - Receta Auténtica de Fresco de Cebada | Sabores de Cuscatlán">
+    <meta name="twitter:description" content="Aprende a preparar el emblemático fresco de cebada rosado salvadoreño con su infusión de especias dulces y aromas artesanales.">
+    <meta name="twitter:image" content={new URL('/img/og-cover.jpg', Astro.site)} />
+
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(schemaData)} />
+</head>
+<body>
+  <Recetas titulo="Fresco de Cebada" descripcion="Fresco salvadoreño de color rosado característico, con esencia de fresa, vainilla y especias." imagen={imgCebada}>
+    <h2>Ingredientes</h2>
+    <ul>
+      <li>1/2 taza de harina de cebada o trigo tostado</li>
+      <li>1 litro de agua y leche evaporada al gusto</li>
+      <li>Esencia de fresa y de vainilla</li>
+      <li>Canela, clavo de olor y pimienta gorda</li>
+      <li>Azúcar y colorante rojo comestible (opcional)</li>
+    </ul>
+
+    <h2>Preparación</h2>
+    <ol>
+      <li>Hierve agua con la canela, clavo y pimienta gorda. Deja enfriar y cuela.</li>
+      <li>Licúa la harina de cebada con el agua especiada.</li>
+      <li>Añade la leche evaporada, azúcar, las esencias de fresa y vainilla, y un toque de colorante para darle su tono rosado.</li>
+      <li>Sirve bien frío con mucho hielo.</li>
+    </ol>
+
+    <h2>Video de Preparación</h2>
+    <div class="contenedor-video">
+      <iframe 
+        src="https://www.youtube.com/embed/2-b1kWrQogo" 
+        title="Video paso a paso - Fresco de Cebada Salvadoreño" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+      </iframe>
+    </div>
+  </Recetas>
+</body>
+</html>

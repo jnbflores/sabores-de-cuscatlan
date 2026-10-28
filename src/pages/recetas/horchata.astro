@@ -1,31 +1,120 @@
 ---
 import Recetas from '../../layouts/Recetas.astro';
 import imgHorchata from '../../assets/Horchata.jpg';
+
+const schemaData = {
+  "@context": "https://schema.org/",
+  "@type": "Recipe",
+  "name": "Fresco de Horchata Salvadoreña",
+  "image": ["https://saboresdecuscatlan.sv/assets/Horchata.jpg"],
+  "author": {
+    "@type": "Organization",
+    "name": "Sabores de Cuscatlán"
+  },
+  "datePublished": "2026-10-28",
+  "description": "La tradicional bebida fría salvadoreña elaborada a base de semilla de morro tostada, cacao, maní, pepitoria y especias.",
+  "prepTime": "PT20M",
+  "cookTime": "PT15M",
+  "totalTime": "PT35M",
+  "keywords": "horchata salvadoreña, fresco de horchata, semilla de morro, bebida tipica el salvador",
+  "recipeYield": "8 porciones",
+  "recipeCategory": "Bebida Típica",
+  "recipeCuisine": "Salvadoreña",
+  "recipeIngredient": [
+    "1 libra de semilla de morro",
+    "1/4 taza de maní",
+    "1/4 taza de semillas de calabaza (pepitoria)",
+    "2 onzas de cacao",
+    "Canela al gusto",
+    "Leche entera o vegetal al gusto",
+    "Agua y azúcar al gusto"
+  ],
+  "recipeInstructions": [
+    {
+      "@type": "HowToStep",
+      "name": "Tostado de semillas",
+      "text": "Tuesta todas las semillas (morro, maní, pepitoria, cacao) y la canela en un comal a fuego bajo cuidando que no se quemen."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Molienda",
+      "text": "Lleva las semillas tostadas a un molino o procésalas finamente en seco en casa hasta obtener un polvo fino."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Extracción",
+      "text": "Agrega agua al polvo obtenido y cuélalo usando una manta de colar, exprimiendo bien todo el extracto."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Mezclado y servido",
+      "text": "Añade leche y azúcar al gusto al extracto, mezcla bien y sirve con abundante hielo."
+    }
+  ]
+};
 ---
-<Recetas titulo="Fresco de Horchata" descripcion="La bebida típica de El Salvador hecha con semilla de morro tostada, cacao, maní y especias." imagen={imgHorchata}>
-  <h2>Ingredientes</h2>
-  <ul>
-    <li>1 libra de semilla de morro</li>
-    <li>1/4 taza de maní y 1/4 taza de semillas de calabaza (pepitoria)</li>
-    <li>2 onzas de cacao y canela al gusto</li>
-    <li>Leche, agua y azúcar</li>
-  </ul>
 
-  <h2>Preparación</h2>
-  <ol>
-    <li>Tuesta todas las semillas (morro, maní, pepitoria, cacao) y la canela en un comal a fuego bajo.</li>
-    <li>Lleva las semillas tostadas a un molino o procésalas finamente en seco en casa.</li>
-    <li>Agrega agua al polvo obtenido y cuélalo usando una manta de colar, exprimiendo bien.</li>
-    <li>Añade leche y azúcar al gusto al extracto, y sirve bien frío.</li>
-  </ol>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPI115 - 2026 - Receta de Fresco de Horchata Salvadoreña | Sabores de Cuscatlán</title>
+    
+    <meta name="description" content="Aprende a preparar el auténtico fresco de horchata salvadoreña con semilla de morro, cacao y canela. Receta tradicional, video paso a paso e ingredientes.">
+    <meta name="keywords" content="fresco de horchata salvadoreña, horchata de morro, bebidas tipicas el salvador, receta de horchata">
+    <meta name="author" content="Sabores de Cuscatlán">
 
-  <h2>Video de Preparación</h2>
-  <div class="contenedor-video">
-    <iframe 
-      src="https://www.youtube.com/embed/Hj1WjV5vI4E" 
-      title="Video paso a paso - Fresco de Horchata Salvadoreña" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-      allowfullscreen>
-    </iframe>
-  </div>
-</Recetas>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8TWSLDHWF"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-N8TWSLDHWF');
+    </script>
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <meta property="og:title" content="TPI115 - 2026 - Receta Auténtica de Fresco de Horchata | Sabores de Cuscatlán">
+    <meta property="og:description" content="Guía paso a paso para elaborar horchata de semilla de morro tradicional salvadoreña con video explicativo.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content={new URL('/img/og-cover.jpg', Astro.site)} />
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TPI115 - 2026 - Receta Auténtica de Fresco de Horchata | Sabores de Cuscatlán">
+    <meta name="twitter:description" content="Guía paso a paso para elaborar horchata de semilla de morro tradicional salvadoreña con video explicativo.">
+    <meta name="twitter:image" content={new URL('/img/og-cover.jpg', Astro.site)} />
+
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(schemaData)} />
+</head>
+<body>
+  <Recetas titulo="Fresco de Horchata" descripcion="La bebida típica de El Salvador hecha con semilla de morro tostada, cacao, maní y especias." imagen={imgHorchata}>
+    <h2>Ingredientes</h2>
+    <ul>
+      <li>1 libra de semilla de morro</li>
+      <li>1/4 taza de maní y 1/4 taza de semillas de calabaza (pepitoria)</li>
+      <li>2 onzas de cacao y canela al gusto</li>
+      <li>Leche, agua y azúcar</li>
+    </ul>
+
+    <h2>Preparación</h2>
+    <ol>
+      <li>Tuesta todas las semillas (morro, maní, pepitoria, cacao) y la canela en un comal a fuego bajo.</li>
+      <li>Lleva las semillas tostadas a un molino o procésalas finamente en seco en casa.</li>
+      <li>Agrega agua al polvo obtenido y cuélalo usando una manta de colar, exprimiendo bien.</li>
+      <li>Añade leche y azúcar al gusto al extracto, y sirve bien frío.</li>
+    </ol>
+
+    <h2>Video de Preparación</h2>
+    <div class="contenedor-video">
+      <iframe 
+        src="https://www.youtube.com/embed/Hj1WjV5vI4E" 
+        title="Video paso a paso - Fresco de Horchata Salvadoreña" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+      </iframe>
+    </div>
+  </Recetas>
+</body>
+</html>

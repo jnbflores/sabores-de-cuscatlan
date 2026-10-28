@@ -1,6 +1,65 @@
 ---
 // Importamos los estilos propios de la página de festivales
 import '../../styles/estilos1.css';
+
+const siteTitle = "TPI115 - 2026 - Festivales Gastronómicos de El Salvador | Sabores de Cuscatlán";
+const siteDescription = "Explora los festivales gastronómicos de El Salvador por departamento. Conoce sus tradiciones, platillos típicos, fechas y ubicaciones de los 14 departamentos.";
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://saboresdecuscatlan.vercel.app');
+
+const eventsSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Festival Gastronómico de Suchitoto",
+    "startDate": "2026-11-15T09:00:00-06:00",
+    "endDate": "2026-11-15T18:00:00-06:00",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "location": {
+      "@type": "Place",
+      "name": "Plaza Central de Suchitoto",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Suchitoto",
+        "addressRegion": "Cuscatlán",
+        "addressCountry": "SV"
+      }
+    },
+    "image": [new URL('/img/og-cover.jpg', Astro.site || 'https://saboresdecuscatlan.vercel.app').toString()],
+    "description": "Feria gastronómica tradicional con platillos autóctonos, artesanías y presentaciones culturales en Cuscatlán.",
+    "organizer": {
+      "@type": "Organization",
+      "name": "Sabores de Cuscatlán",
+      "url": "https://saboresdecuscatlan.vercel.app"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Festival Nacional de la Pupusa en Olocuilta",
+    "startDate": "2026-11-08T08:00:00-06:00",
+    "endDate": "2026-11-08T20:00:00-06:00",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "location": {
+      "@type": "Place",
+      "name": "Pupusódromo El Triángulo",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Olocuilta",
+        "addressRegion": "La Paz",
+        "addressCountry": "SV"
+      }
+    },
+    "image": [new URL('/img/og-cover.jpg', Astro.site || 'https://saboresdecuscatlan.vercel.app').toString()],
+    "description": "Celebración nacional de la pupusa de arroz con degustaciones, música en vivo y concursos gastronómicos.",
+    "organizer": {
+      "@type": "Organization",
+      "name": "Sabores de Cuscatlán",
+      "url": "https://saboresdecuscatlan.vercel.app"
+    }
+  }
+];
 ---
 
 <!DOCTYPE html>
@@ -8,14 +67,27 @@ import '../../styles/estilos1.css';
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Explora festivales gastronómicos de El Salvador por departamento. Conoce sus tradiciones, platillos, fechas y ubicaciones.">
+  
+  <title>{siteTitle}</title>
+  <meta name="description" content={siteDescription}>
   <meta name="keywords" content="festivales de El Salvador, festivales gastronómicos, comida típica salvadoreña, ferias gastronómicas">
-  <meta property="og:title" content="Festivales de El Salvador">
-  <meta property="og:description" content="Descubre las tradiciones y sabores de los 14 departamentos.">
-  <meta property="og:type" content="website">
-  <title>Festivales Gastronómicos de El Salvador | Sabores de Cuscatlán</title>
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href={canonicalURL} />
 
-    <!-- Google tag (gtag.js) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content={canonicalURL}>
+  <meta property="og:title" content={siteTitle}>
+  <meta property="og:description" content={siteDescription}>
+  <meta property="og:image" content={new URL('/img/og-cover.jpg', Astro.site)}>
+  <meta property="og:site_name" content="Sabores de Cuscatlán" />
+  <meta property="og:locale" content="es_SV" />
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content={siteTitle}>
+  <meta name="twitter:description" content={siteDescription}>
+  <meta name="twitter:image" content={new URL('/img/og-cover.jpg', Astro.site)}>
+
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8TWSLDHWF"></script>
   <script is:inline>
     window.dataLayer = window.dataLayer || [];
@@ -24,6 +96,9 @@ import '../../styles/estilos1.css';
 
     gtag('config', 'G-N8TWSLDHWF');
   </script>
+
+  <!-- Schema.org Event JSON-LD -->
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(eventsSchema)} />
 
   <!-- Favicon SVG oficial -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -34,7 +109,6 @@ import '../../styles/estilos1.css';
 </head>
 <body>
 
-  <!-- Encabezado y navegación global -->
   <header class="header-global">
     <div class="barra-global">
       <a class="marca-global" href="/">
@@ -71,7 +145,6 @@ import '../../styles/estilos1.css';
         <h1>Festivales de<br><em>El Salvador</em></h1>
         <p>Descubre la cultura, tradiciones y festividades gastronómicas de los 14 departamentos de El Salvador.</p>
 
-        <!-- BUSCADOR DESTACADO DENTRO DEL HERO -->
         <div class="hero-search-wrapper">
           <label class="search search-hero">
             <span>⌕</span>
@@ -107,7 +180,6 @@ import '../../styles/estilos1.css';
   </footer>
 
   <style>
-    /* Estilos propios de la navegación aislados para no sobreescribir estilos1.css */
     :root {
       --cafe-global: #7a3410;
       --naranja-global: #c2510f;
